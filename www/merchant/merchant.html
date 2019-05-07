@@ -1,0 +1,249 @@
+<ion-view class="service-detail" hide-tabs>
+
+    <div class="service-header">
+      <!--<button  ng-class="{'wColor':unfavL,'bColor':!unfavL}" class="button button-icon icon icon-return-bold" ng-click="back()"></button>-->
+      <!--<button  ng-class="{'wColor':unfavL,'bColor':!unfavL}" ng-click="share()" class="icon-share"></button>-->
+      <!--<button  ng-class="{'icon-collect' :!fav, 'icon-ygo-fillingheart fav' :fav,'wColor':unfavL,'bColor':!unfavL}" class="button button-icon icon"  ng-click="setFav()" id="favImg"></button>-->
+    </div>
+    <div class="bar bar-subheader service-detail-subheader"  align-title="center" ng-if="showsub">
+      <p>{{service.zhtitle}}</p>
+    </div>
+
+
+    <div class="service-detail-footer">
+        <div class="chinease-order" ng-click="goDownload()"  data-ng-if="service_type != 10"><span>{{translations.CHINESE_ORDER}}</span></div>
+        <div class="taxi" ng-click="goDownload()"  data-ng-if="service_type != 10" style=""><span>{{translations.TAXI_CARD}}</span></div>
+        <div class="ten-taxi" ng-click="goDownload()"  data-ng-if="service_type === 10"><span>{{translations.TAXI_CARD}}</span></div>
+    </div>
+
+
+    <ion-content class="service-detail-content" on-scroll="scrollProcess()">
+        <div class="img-container">
+            <ion-slide-box show-pager="true">
+                <ion-slide ng-repeat="image in images">
+                    <img ng-src="{{base + image.url}}" id="img2" zoom-src="{{image}}" zoom-view onerror="javascript:this.src='img/loading_failed.png';">
+                </ion-slide>
+            </ion-slide-box>
+            <div class="guodu"></div>
+            <!--<img ng-src="{{base + images[0].url}}" id="img2"   onerror="javascript:this.src='img/loading_failed.png';">-->
+        </div>
+        <div class="service-base">
+            <div class="service-name">{{service.zhtitle}}</div>
+            <div class="service-info" data-ng-if="service.zhtitle!=service.title">
+                {{service.title}}
+            </div>
+            <div class="per-capita">
+                <span ng-if="service_type==20"><label><span>฿</span>{{service.avg_expense/100}}</label> <label> {{translations.PERSON}}</label></span>
+                <span data-ng-if="service_type==10"><label>{{service.price}}</label></span>
+            </div>
+            <div class="service-order-in" >
+                <p  ng-click="goDownload()" class="brief-content" ng-bind-html="serviceDesc | to_trusted | ellipsis:55:translations.ASSISTANT_RECORD_DETAIL_TITLE"></p>
+            </div>
+        </div>
+
+        <div class="reservation" ng-if="service.service_bookings && service.service_bookings.length>0">
+            <div class="reservation-hear" ng-click="goDownload()">
+                <span>{{translations.APPOINT_PROMOTION}}</span>
+                <!--<span class="min" ng-if="!reservationContent">减</span>-->
+                <!--<span class="present" ng-if="!reservationContent">送</span>-->
+                <!--<span class="discount" ng-if="!reservationContent">折</span>-->
+                <span class="header" ng-class="{'min':dd.id==100,'present':dd.id==200,'discount':dd.id==300}" data-ng-if="dd.content && !reservationContent" ng-repeat="dd in appointDiscount">
+                    {{dd.name}}
+                </span>
+                <i ng-if="!reservationContent && appointLength.length>0" class="icon-ygo-unfold"></i>
+                <i ng-if="appointLength.length>0 && reservationContent" class="icon-ygo-fold"></i>
+            </div>
+            <div class="reservation-content" ng-if="reservationContent">
+                <div ng-repeat="dd in appointDiscount" data-ng-if="dd.content">
+                    <span class="name" ng-class="{'min':dd.id==100,'present':dd.id==200,'discount':dd.id==300}">{{dd.name}}</span>
+                    <span class="content">{{dd.content}}</span>
+                </div>
+            </div>
+            <div class="appoint" ng-click="goDownload()">
+                <img src="img/reservation@3x.png">
+                <span>{{translations.APPOINT_NOW}}</span>
+            </div>
+        </div>
+
+        <div class="logo-container" ng-if="select_payment.length > 0 || select_service.length > 0">
+            <div class="png-container" ng-if="select_payment.length > 0">
+                <img src="img/VISA@2x.png" style="height: 4vw;" alt="visa" ng-if="select_payment.indexOf('Visa') !== -1">
+                <img src="img/MasterCard@2x.png" style="height: 5.33vw;" alt="MasterCard" ng-if="select_payment.indexOf('Master Card') !== -1">
+                <!-- <img src="img/JCB@2x.png" alt="JCB" ng-if="select_payment.indexOf('') !== -1"> -->
+                <img src="img/UnionPay@2x.png" style="height: 5.33vw" alt="UnionPay" ng-if="select_payment.indexOf('Union Pay') !== -1">
+                <!-- <img src="img/applePay@2x.png" alt="applePay" ng-if="select_payment.indexOf('') !== -1"> -->
+                <img src="img/LINE-Pay@2x.png" style="height: 5.33vw;" alt="LINE Pay" ng-if="select_payment.indexOf('LINE Pay') !== -1">
+                <img src="img/mPay@2x.png" alt="mPay" style="height: 6.66vw;" ng-if="select_payment.indexOf('mPay') !== -1">
+                <img src="img/aliPay@2x.png" alt="aliPay" style="height: 6.66vw;" ng-if="select_payment.indexOf('Alipay') !== -1">
+                <img src="img/weChat-Pay@2x.png" alt="weChat Pay"  style="height:5.86vw" ng-if="select_payment.indexOf('WeChat Pay') !== -1">
+            </div>
+            <div class="svg-container" ng-class="{'onesvg':select_payment.length <= 0}" ng-if="select_service.length > 0">
+                <i class="icon-ygo-wifi" ng-if="select_service.indexOf('Wifi') !== -1"></i>
+                <span ng-if="select_service.indexOf('Wifi') !== -1">Wifi</span>
+                <i class="icon-ygo-parking" ng-if="select_service.indexOf('Parking Lot') !== -1"></i>
+                <span ng-if="select_service.indexOf('Parking Lot') !== -1">{{translations.SERVICE_SUPPORT_PARKING_LOT}}</span>
+                <i class="icon-ygo-fooddeli" ng-if="select_service.indexOf('Food Delivery') !== -1"></i>
+                <span ng-if="select_service.indexOf('Food Delivery') !== -1">{{translations.SERVICE_SUPPORT_FOOD_DELIVERY}}</span>
+            </div>
+        </div>
+        <div class="location-box">
+            <i class="icon-ygo-location"></i>
+            <span>{{translations.SERVICE_DETAIL_SORT_TITLE_ADDRESS}}</span>
+        </div>
+        <div class="map service-map">
+            <div class="wrapperMap">
+                <div id="container-123"></div>
+                <!--<a id="pantoBtn" ng-show="showMap" class="button button-clear button-positive"></a>-->
+            </div>
+            <div class="row service-way">
+                <div class="col" ng-click="goDownload()" class="button button-block button-positive how-to-go" style="text-align: center;">{{translations.HOW_TO_GO}}</div>
+                <div class="separator"></div>
+                <div class="col taxi-card" ng-click="goDownload()" style="text-align: center;">{{translations.TAXI_CARD}}</div>
+            </div>
+        </div>
+        <div class="address-box">
+            <p class="info" ng-class="{'bo': service_type!=10?service.nearest_transport.trim()=='':service.nearest_transport.trim()==''&&!service.show_venue}">{{service.cn_addr}}</p>
+            <p class="stadiums" ng-if="service_type === 10&&service.show_venue">{{translations.SERVICE_DETAIL_ACTOR_ADDRESS}}</p>
+            <p class="stadiums-content" ng-if="service_type === 10&&service.show_venue">{{service.show_venue}}</p>
+            <p class="sub-title" data-ng-if="service.nearest_transport.trim()!==''">{{translations.SERVICE_DETAIL_SORT_SUBTITLE_TRANSPORTATION}}</p>
+            <p class="address-info" data-ng-if="service.nearest_transport.trim()!==''">{{service.nearest_transport}}</p>
+        </div>
+        <div class="info-container">
+            <div class="title">
+                <i class="icon-ygo-information"></i>
+                <span>{{translations.SERVICE_DETAIL_SORT_TITLE_INFORMATION}}</span>
+            </div>
+            <div class="phone-box" ng-if="service.contact_no">
+                <span>{{service.contact_no}}</span>
+                <button ng-click="goDownload()">{{translations.SERVICE_DETAIL_CALL}}</button>
+            </div>
+            <!-- 显示社交帐号信息 -->
+            <div class="social-contacts-box">
+                <p class="social-contact-info" ng-if="wechat!=''">
+                    <i class="icon icon-ygo-wechat"></i>
+                    <span>{{wechat}}</span>
+                </p>
+                <p class="social-contact-info" ng-if="line!=''">
+                    <i class="icon icon-ygo-line"></i>
+                    <span>{{line}}</span>
+                </p>
+                <p class="social-contact-info" ng-if="facebook!=''">
+                    <i class="icon icon-ygo-fb"></i>
+                    <span>{{facebook}}</span>
+                </p>
+                <p class="social-contact-info" ng-if="instagram!=''">
+                    <i class="icon icon-ygo-ins"></i>
+                    <span>{{instagram}}</span>
+                </p>
+            </div>
+            <!--显示是否营业 -->
+            <div class="open-box" ng-click="goDownload()" ng-if="service_type==20">
+                <span ng-if="isOpen">{{translations.OPEN_NOW_SIGN}}</span>
+                <span ng-if="!isOpen">{{translations.NOT_IN_BUSINESS}}</span>
+                <button class="button button-icon icon icon-ygo-enter"></button>
+            </div>
+        </div>
+        <div class="tip-container" ng-if="service_type === 10">
+            <div class="title">
+                <i class="icon-ygo-tip"></i>
+                <span>{{translations.SERVICE_DETAIL_SORT_TITLE_NOTICE}}</span>
+            </div>
+            <div class="totoal">
+                <div class="show-box">
+                    <div class="box1">
+                        <span>{{translations.SERVICE_DETAIL_SHOW_DATE}}</span>
+                    </div>
+                    <div class="box2">
+                        <span>{{service.show_date}}</span>
+                    </div>
+                </div>
+                <div class="show-box">
+                    <div class="box1">
+                        <span>{{translations.SERVICE_DETAIL_SHOW_TIME}}</span>
+                    </div>
+                    <div class="box2">
+                        <span>{{service.show_time}}</span>
+                    </div>
+                </div>
+                <div class="show-box">
+                    <div class="box1">
+                        <span>{{translations.SERVICE_DETAIL_ENTRY_TIME}}</span>
+                    </div>
+                    <div class="box2">
+                        <span>{{service.entry_time}}</span>
+                    </div>
+                </div>
+                <div class="show-box">
+                    <div class="box1">
+                        <span>{{translations.SERVICE_DETAIL_CHILDREN_NOTICE}}</span>
+                    </div>
+                    <div class="box2">
+                        <span>{{service.children_notice}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="comment-container">
+            <div class="comment-content" ng-if="hasRemark">
+                <div class="name-container">
+                    <img ng-src="{{avatar}}" alt="avatar" onerror="angular.element(this).scope().loadAvatar()">
+                    <div class="name-box">
+                        <p>{{rateone.user.name}}</p>
+                        <p>{{rateone.created_at | amDateFormat: 'YYYY.MM.DD'}}</p>
+                    </div>
+                </div>
+                <div class="comment-medium-star">
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[rateone.rate >= 10]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[rateone.rate >= 20]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[rateone.rate >= 30]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[rateone.rate >= 40]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[rateone.rate >= 50]"></div>
+                </div>
+                <p class="text">{{rateone.content}}</p>
+                <p class="score">{{service.rating/10}}</p>
+                <div class="comment-medium-star star2">
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[service.rating >= 10]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[service.rating >= 20]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[service.rating >= 30]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[service.rating >= 40]"></div>
+                    <div ng-class="{true:'icon-ygo-star icon-ygo-star-fill',false:'icon-ygo-star icon-ygo-star-empty'}[service.rating >= 50]"></div>
+                </div>
+                <a class="comment-view-all" ng-href="#/tab/home/service/comments/{{service.id}}/{{service.rating}}">{{translations.SERVICE_DETAIL_VIEW_ALL}}({{total_count}})</a>
+            </div>
+            <div class="no-comment comment-content" ng-if="!hasRemark">
+                <div class="name-container">
+                    <div class="blank-avatar"></div>
+                    <div class="blank-name-box">
+                        <div class="blank-name"></div>
+                        <div class="blank-date"></div>
+                    </div>
+                </div>
+                <div class="comment-medium-star blank-star">
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                </div>
+                <p class="blank-p"></p>
+                <p class="blank-p"></p>
+                <p class="blank-p"></p>
+                <p class="blank-remark">{{translations.NO_COMMENT}}</p>
+                <div class="comment-medium-star blank-star blank-star2">
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                    <div class="icon-ygo-star icon-ygo-star-empty"></div>
+                </div>
+                <a class="comment-view-all comment-view-all2">{{translations.SERVICE_DETAIL_VIEW_ALL}}(0)</a>
+            </div>
+        </div>
+        <div class="remark-container">
+            <div class="remark-box" ng-click="goDownload()">
+                <div class="icon-ygo-remark"></div>
+                <span>{{translations.SERVICE_DETAIL_WRITING_PROMPT}}</span>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

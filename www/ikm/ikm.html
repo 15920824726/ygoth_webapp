@@ -1,0 +1,52 @@
+<ion-view class="ikm">
+    <ion-content>
+        <p class="header">印尼话费充值</p>
+        <div class="number-block">
+            <p class="welcome">
+                <span>欢迎使用</span> <span>印尼话费</span>
+            </p>
+            <p class="tip">充值服务</p>
+            <div class="number">
+                <input  placeholder="如： 0811234567" ng-class="{'hasvalue':user.mobile}"  ng-model="user.mobile" >
+                <p ng-if="!wrongNumber && !showPrice">充值面额根据运营商而不同， 请先输入号码。</p>
+                <p ng-if="!wrongNumber && showPrice">此号码归属于：{{goods.id}}</p>
+                <p ng-if="wrongNumber && !showPrice" class="wrong">号码有误!</p>
+                <img ng-if="showPrice && goods.id=='THREE'"   src="img/operator_A@2x.png">
+                <img ng-if="showPrice && goods.id=='TELKOMSEL'"   src="img/operator_B@2x.png">
+                <img ng-if="showPrice && goods.id=='SMARTFREN'"   src="img/operator_C@2x.png">
+                <img ng-if="showPrice && goods.id=='XL_AXIATA'"   src="img/operator_D@2x.png">
+                <img ng-if="showPrice && goods.id=='INDOSAT'"   src="img/operator_E@2x.png">
+            </div>
+        </div>
+        <div class="price-block">
+            <p class="select-title">
+                <span>选择金额</span>
+                <span>* 价格已经包含VAT</span>
+            </p>
+            <div class="no-list" ng-if="!showPrice">
+                <div class="no1">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <div class="no2">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </div>
+            <div class="price-list" ng-if="showPrice" >
+                <div class="item" ng-click="select(good,$index)" ng-class="{'selected': selected==$index}" ng-repeat="good in goods.can_topup">
+                    <p class="Amount">{{good}}</p>
+                    <p class="currency">Rupiah</p>
+                    <p class="costs">售价： {{good}} Rupiah</p>
+                </div>
+
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer-bar ng-if="showPrice">
+        <div class="cost">充值面额： {{price}} 印尼卢比</div>
+        <div class="confirm" ng-click="confirm()">确认</div>
+    </ion-footer-bar>
+</ion-view>

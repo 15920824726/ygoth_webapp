@@ -1,0 +1,100 @@
+<ion-view class="order-food" hide-Tabs >
+  <ion-content class="store" overflow-scroll="true">
+    <div class="orders_header">
+      <div class="order-cover">
+        <img src="{{base + merchant.background}}" alt="store" class="store-picture">
+      </div>
+      <div id="order_info" class="order_info">
+        <p class="store-name">{{merchant.name}}</p>
+        <p id="category-name" class="category-name">{{merchant.original_name}}</p>
+      </div>
+    </div>
+    <div class="row food-list"  ng-style="{'top':orderTop+'px'}">
+      <div class="col col-25 list-left">
+        <ion-scroll class="scroll-food" direction="y" scrollbar-x="false" scrollbar-y="false">
+          <ul class="food-classify" ng-repeat="type in merchant.classifications">
+            <div class="classify-box">
+              <li ng-class="{'classify-name-focus':selected==$index,}" ng-click="showMenu($index)">
+                <span class="name">{{type.name}}</span>
+                <i ng-show="type.categoryNumber > 0"
+                   ng-class="{'ifocus':selected==$index,'iblur':selected!==$index}">{{type.categoryNumber}}</i>
+              </li>
+            </div>
+          </ul>
+        </ion-scroll>
+      </div>
+      <div class="col col-75 list-right" ng-hide="selected!==selectedClassIndex">
+        <div class="right-categary">
+          {{merchant.classifications[selectedClassIndex].name}}
+        </div>
+        <ion-scroll delegate-handle="order" class="scroll-food-details" direction="y" scrollbar-x="false"
+                    scrollbar-y="false" style="background-color: #ffffff;">
+          <div class="food-details"
+               ng-repeat="product in merchant.classifications[selectedClassIndex].products">
+            <div class="details-box">
+              <div class="food-img">
+                <img ng-src="{{base + product.thumb}}" class="full-image"
+                     onerror="javascript:this.src='img/food2.jpg';">
+              </div>
+              <div class="food-info">
+                <div class="food-name">&nbsp;{{product.title}}</div>
+                <p class="food-name-thai">&nbsp;{{product.origin_title}}</p>
+                <div class="row">
+                  <div class="col">
+                    <span class="price">฿{{product.price/100}}</span>
+                  </div>
+                  <div class="col number">
+                    <i class="icon-ygo-minus" ng-show="product.number > 0"
+                       ng-click="minus($index, product)"></i>
+                    <p ng-show="product.number > 0">{{product.number}}</p>
+                    <i class="icon-ygo-add" ng-click="add($index, product)"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ion-scroll>
+      </div>
+    </div>
+
+    <div class="details-modal" ng-click="alertTags()" ng-show="showSummary">
+      <div class="details-modal-content" ng-click="tags($event)">
+        <div class="detail-header">
+          <p>-{{translations.ORDER_TAGS}}-</p>
+          <p ng-click="clear()">{{translations.ORDER_CLEAR}}</p>
+        </div>
+        <div class="detail-img">
+          <span>{{translations.ORDER_IMG_REFER}}</span>
+        </div>
+        <div class="detail-content">
+          <div class="content" ng-repeat="item in orderItems">
+            <p>{{item.title}}</p>
+            <div class="tags_colum_price">
+              <p class="tags_origin_title">{{item.origin_title}}</p>
+              <div class="column_price">
+                <p>฿{{item.price/100}}</p>
+                <div class="tags_column">
+                  <div class="icon-ygo-minus" ng-click="sumMinus($index, item)"></div>
+                  <p>x{{item.quantity}}</p>
+                  <div class="icon-ygo-add" ng-click="sumAdd($index, item)"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar ng-if="isLoggedIn">
+    <div class="tags" ng-click="showSum()">
+      <img src="img/bag@2x.png">
+      <p >฿{{totalPrice/100}}</p>
+    </div>
+    <p class="tags-number" ng-show="totalNumber>0">
+      {{totalNumber}}
+    </p>
+    <div class="total-number" ng-click="makeOrder()">
+      <p>{{translations.ORDER_COMMIT}}</p>
+    </div>
+  </ion-footer-bar>
+</ion-view>

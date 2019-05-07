@@ -1,0 +1,30 @@
+<ion-view class="topup">
+    <ion-content>
+      <!--<p style="text-align:center;margin-top:10%;">AIS游客卡充值</p>-->
+        <img  src="img/ais_charge.jpg">
+        <p class="header">{{translations.AIS_PAY}}</p>
+        <div class="telephone">
+            <input type="number" ng-class="{'hasvalue':user.mobile}"  ng-model="user.mobile" placeholder={{translations.TELE_INPUT}}>
+        </div>
+        <p class="value">{{translations.SELECT_PAY}}</p>
+
+        <div class="value-list">
+            <div ng-click="selectPay(item)" class="list-list" ng-repeat="item in values">
+                ฿ {{item.value}}
+            </div>
+            <!--<ion-radio ng-repeat="item in values" ng-value="item.value"  ng-model="data" ng-click="selectPay(item)" class="list">-->
+                <!--฿ {{item.value}}-->
+            <!--</ion-radio>-->
+        </div>
+
+        <div class="words">
+            <p>{{translations.MATTERS_ONE}}</p>
+            <p>{{translations.MATTERS_TWO}}</p>
+        </div>
+
+        <div ng-disabled="!user.mobile || user.mobile.toString().length<8 || user.mobile.toString().length>12 || !signPay"  class="footer" ng-click="goPay()">
+            <span>{{translations.PAY_EXPECT}}</span>
+        </div>
+
+    </ion-content>
+</ion-view>

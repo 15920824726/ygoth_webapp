@@ -1,0 +1,1229 @@
+/* --------------- 隐藏地图上默认图标  开始----------------------------- */
+
+a[href^="http://maps.google.com/maps"] {
+    display: none !important
+}
+
+a[href^="https://maps.google.com/maps"] {
+    display: none !important
+}
+
+
+/* .container-123 a {
+    display: none;
+}
+
+.gmnoprint {
+    display: none!important;
+} */
+
+.gmnoprint a,
+.gmnoprint span,
+.gm-style-cc {
+    display: none!important;
+}
+
+
+/* .gmnoprint div {
+    background: none !important;
+}
+
+.gm-style .gm-style-cc+div {
+    display: none!important;
+} */
+
+
+/*--------------- 隐藏地图上默认图标  结束-----------------------------*/
+
+.service-detail .icon-ygo-collection::before {
+    font-size: 17px;
+}
+
+.service-detail .service-detail-subheader {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    height: 35px;
+    font-weight: bold;
+    border-bottom: 1px solid #b2b2b2;
+    top: 44px!important;
+}
+
+.service-detail .service-detail-subheader p {
+    font-size: 14px;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.service-detail .header-bar .icon-ygo-back {
+    font-weight: bold;
+}
+
+.service-detail .header-bar .title {
+    margin: 0;
+    right: 55px!important;
+    font-size: 15px;
+    color: #3a3a3a;
+    text-align: right!important;
+    font-weight: 600;
+}
+
+.service-detail .service-header .unfav {
+    font-size: 17px;
+    color: #cccccc;
+    width: 50px;
+}
+
+.service-detail .service-header .fav {
+    font-size: 17px;
+    color: #ee0000!important;
+    width: 50px;
+}
+
+.service-detail .service-detail-content .img-container,
+.service-detail .service-detail-content .img-container img {
+    width: 100%;
+    background-image: url(../img/loading.png);
+    background-repeat: no-repeat;
+}
+
+.service-detail .slider-pager {
+    /*display: none;*/
+    bottom: 14.4vw;
+    transform: translateZ(0);
+}
+
+.service-detail-content .slider-pager .slider-pager-page {
+    color: #ffffff;
+}
+
+.service-detail .service-detail-content .info-wrapper {
+    padding: 8vw 0 10.67vw 4.27vw;
+}
+
+.service-detail .service-detail-content .info-wrapper .service-name span {
+    font-size: 5.33vw;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .info-wrapper .service-name .icon-ygo-numberone {
+    display: inline-block;
+    margin-left: 3.2vw;
+    height: 3.2vw;
+    width: 6.93vw;
+    color: #ee0000;
+}
+
+.service-detail .service-detail-content .info-wrapper .service-info {
+    padding: 4vw 0 8vw 0;
+}
+
+.service-detail .service-detail-content .info-wrapper .service-info .flag-thai {
+    display: inline-block;
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+    background: url(../img/country-thai.png) 100% 100% no-repeat;
+    background-size: 151%;
+}
+
+.service-detail .service-detail-content .info-wrapper .service-info span {
+    display: inline-block;
+    margin-left: 2.13vw;
+    font-size: 4vw;
+    line-height: 4vw;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .info-wrapper .per-capita {
+    height: 5.33vw;
+}
+
+.service-detail .service-detail-content .info-wrapper .per-capita span {
+    font-size: 5.33vw;
+    line-height: 5.33vw;
+    color: #ee0000;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .logo-container .png-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 4.53vw 0 0 0;
+    /*margin-bottom: 9.33vw;*/
+}
+
+.service-detail .service-detail-content .logo-container .svg-container {
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.service-detail .service-detail-content .logo-container div>img {
+    margin-bottom: 4.53vw;
+}
+
+.service-detail .service-detail-content .logo-container div img+img {
+    margin-left: 5.33vw;
+}
+
+.service-detail .service-detail-content .logo-container .svg-container span {
+    display: inline-block;
+    margin: 0 4.53vw 0 2.13vw;
+    font-size: 3.20vw;
+    color: #757576;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .logo-container .svg-container .icon-ygo-wifi {
+    display: inline-block;
+    color: #757576;
+    font-size: 2.93vw;
+}
+
+.service-detail .service-detail-content .logo-container .svg-container .icon-ygo-parking {
+    display: inline-block;
+    color: #757576;
+    font-size: 3.46vw;
+}
+
+.service-detail .service-detail-content .logo-container .svg-container .icon-ygo-fooddeli {
+    display: inline-block;
+    color: #757576;
+    font-size: 2.93vw;
+}
+
+.service-detail .service-detail-content .location-box {
+    padding: 4vw 0 4vw 4vw;
+}
+
+.service-detail .service-detail-content .location-box .icon-ygo-location {
+    font-size: 4.8vw;
+}
+
+.service-detail .service-detail-content .location-box span {
+    font-size: 4vw;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .service-map {
+    height: 82vw;
+    width: 100%;
+    position: relative;
+}
+
+.service-map #container-123 {
+    width: 100vw;
+    height: 82vw;
+}
+
+.service-detail .service-detail-content .service-map .service-way {
+    position: absolute;
+    bottom: 5.33vw;
+    width: 91.47vw;
+    height: 14.67vw;
+    background-color: #ffffff;
+    border-radius: 1.33vw;
+    align-items: center;
+    font-size: 4vw;
+    color: #3a3a3a;
+    left: 4vw;
+    z-index: 5;
+    transform: translateZ(0);
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .service-map .service-way .separator {
+    width: 2px;
+    height: 5.07vw;
+    background-color: #757576;
+    border-radius: 1px;
+}
+
+.service-detail .service-detail-content .info-container .title .icon-ygo-information {
+    font-size: 4.8vw;
+}
+
+.service-detail .service-detail-content .info-container .title span {
+    font-size: 15px;
+    color: #3a3a3a;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .info-container .phone-box {
+    padding: 4vw 0 0 4.26vw;
+    line-height: 6.13vw;
+}
+
+.service-detail .service-detail-content .info-container .phone-box span {
+    font-size: 3.73vw;
+    color: #757576;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .info-container .phone-box button {
+    border: 1px solid #0072ff;
+    border-radius: 3px;
+    padding: 0 4.8vw;
+    height: 6.13vw;
+    background: transparent;
+    float: right;
+    margin-right: 4.27vw;
+    color: #0072ff;
+    font-size: 3.47vw;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .info-container .open-box,
+.service-detail .service-detail-content .info-container .website {
+    padding: 4vw 0 4vw 4.26vw;
+    margin: 0;
+    border-bottom: 1px solid #f7f1f1;
+}
+
+.service-detail .service-detail-content .info-container .open-box span,
+.service-detail .service-detail-content .info-container .website {
+    font-size: 3.73vw;
+    color: #ee0000;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .info-container .open-box button {
+    min-height: 4.27vw;
+    height: 4.27vw;
+    border-width: 0;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+}
+
+.service-detail .service-detail-content .info-container .open-box button::before,
+.service-detail .service-detail-content .info-container .open-box button::after {
+    padding: 0 4.27vw;
+    height: 4.27vw;
+    font-size: 4.27vw;
+    line-height: 4.27vw;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info {
+    line-height: 11.47vw;
+    margin-bottom: 0;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info i {
+    vertical-align: middle;
+    width: 4.27vw;
+    display: inline-block;
+    margin-right: 2.67vw;
+    text-align: center;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info .icon-ygo-wechat:before {
+    font-size: 4.27vw;
+    color: #68bf4f;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info .icon-ygo-line:before {
+    font-size: 3.73vw;
+    color: #19cc00;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info .icon-ygo-fb:before {
+    font-size: 4.27vw;
+    color: #4e69a9;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info .icon-ygo-ins:before {
+    font-size: 3.47vw;
+    color: #dd42d0;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box .social-contact-info span {
+    color: #757576;
+    font-size: 3.73vw;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .info-container .category {
+    font-size: 3.73vw;
+    color: #757576;
+    padding: 4vw 0;
+    margin: 0;
+    border-bottom: 1px solid #f7f1f1;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .info-container .brief {
+    font-size: 4vw;
+    color: #3a3a3a;
+    padding: 4vw 0 5.33vw 0;
+    margin: 0;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .info-container .brief-content {
+    margin: 0;
+}
+
+.service-detail .service-detail-content .view-all-container {
+    margin-right: 4.27vw;
+}
+
+.service-detail .service-detail-content .view-all-container .view-all {
+    display: block;
+    margin: 8vw auto;
+    height: 8.8vw;
+    padding: 0 6.67vw;
+    background-color: #ee0000;
+    border-radius: 3px;
+    border: 0;
+    color: white;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .tip-container {
+    margin-top: 2.66vw;
+}
+
+.service-detail .service-detail-content .tip-container .totoal {
+    padding: 4vw 4.26vw 4vw 4.26vw;
+    background-color: #ffffff;
+}
+
+.service-detail .service-detail-content .tip-container .title {
+    height: 12vw;
+    background-color: #fcfafa;
+    display: flex;
+    align-items: center;
+    padding-left: 4.26vw;
+}
+
+.service-detail .service-detail-content .tip-container .title .icon-ygo-information {
+    font-size: 4.8vw;
+}
+
+.service-detail .service-detail-content .tip-container .title span {
+    font-size: 4vw;
+    color: #3a3a3a;
+    margin-left: 2.67vw;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .tip-container .show-box {
+    display: flex;
+    display: -webkit-flex;
+    padding-top: 2vw;
+}
+
+.service-detail .service-detail-content .tip-container .show-box span {
+    line-height: 6.93vw;
+    font-size: 3.73vw;
+    line-height: 6.93vw;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .tip-container .show-box .box1 {
+    display: inline-block;
+    white-space: nowrap;
+    margin-right: 6.4vw;
+}
+
+.service-detail .service-detail-content .tip-container .show-box .box2 {
+    display: inline-block;
+}
+
+.service-detail .service-detail-content .tip-container .show-box .box1 span {
+    color: #757576;
+}
+
+.service-detail .service-detail-content .tip-container .show-box .box2 span {
+    color: #3a3a3a;
+}
+
+.service-detail .service-detail-content .comment-container {
+    background-color: #f7f1f1;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    font-size: 0;
+    margin-top: 5.33vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content {
+    width: 91.47vw;
+    background-color: #ffffff;
+    border-radius: 1.33vw;
+    padding: 6.67vw 0px 8vw 6.67vw;
+    position: relative;
+    box-shadow: 0 0 5.33vw rgba(0, 0, 0, 0.1);
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .name-container {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content img,
+.service-detail .service-detail-content .comment-container .no-comment .blank-avatar {
+    width: 10.67vw;
+    height: 10.67vw;
+    border-radius: 50% 50%;
+    background-color: #f7f1f1;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .name-box,
+.service-detail .service-detail-content .comment-container .no-comment .blank-name-box {
+    display: inline-block;
+    margin-left: 3.2vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .name-box :nth-child(1) {
+    margin-bottom: 1.87vw;
+    font-size: 4.27vw;
+    line-height: 4.27vw;
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .name-box :nth-child(2) {
+    margin-bottom: 0;
+    font-weight: 400;
+    font-size: 3.2vw;
+    line-height: 3.2vw;
+    color: #757576;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-medium-star {
+    margin: 3.2vw 0 2.67vw 0;
+    line-height: 2.67vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-medium-star .icon-ygo-star-empty {
+    color: #cdcdcd;
+    width: 2.67vw;
+    display: inline-block;
+    height: 2.67vw;
+    font-size: 2.67vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-medium-star .icon-ygo-star-fill {
+    color: #ee0000;
+    width: 2.67vw;
+    display: inline-block;
+    height: 2.67vw;
+    font-size: 2.67vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-medium-star div+div {
+    margin-left: 1.33vw;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .text {
+    margin-bottom: 9.33vw;
+    font-size: 4vw;
+    line-height: 6.4vw;
+    color: #757576;
+    padding-right: 6.67vw;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .score {
+    font-size: 5.33vw;
+    color: #ee0000;
+    margin-bottom: 0px;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .star2 {
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-view-all {
+    display: inline-block;
+    height: 8vw;
+    font-size: 3.73vw;
+    line-height: 3.73vw;
+    color: #0072ff;
+    position: absolute;
+    right: 0px;
+    margin-top: 3.2vw;
+    padding: 0 6.67vw;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-name-box .blank-name,
+.service-detail .service-detail-content .comment-container .no-comment .blank-name-box .blank-date {
+    height: 3.73vw;
+    width: 10.8vw;
+    border-radius: 0.8vw;
+    background-color: #f7f1f1;
+    margin-bottom: 1.6vw;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-name-box .blank-date {
+    width: 16.3vw;
+    margin-bottom: 0;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-star div {
+    color: #f7f1f1!important;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-p {
+    width: 77.6vw;
+    height: 3.7vw;
+    border-radius: 0.8vw;
+    margin-bottom: 2.7vw;
+    background-color: #f7f1f1;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-star2 {
+    display: inline-block;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-star2 div {
+    color: #cccccc!important;
+}
+
+.service-detail .service-detail-content .comment-container .no-comment .blank-remark {
+    margin-top: 9.33vw;
+    font-size: 5.3vw;
+    color: #3a3a3a;
+}
+
+.service-detail .service-detail-content .comment-container .comment-content .comment-view-all2 {
+    font-weight: bold;
+    color: #cccccc;
+}
+
+.service-detail .service-detail-content .remark-container {
+    background-color: #f7f1f1;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    padding: 9.33vw 0 18.66vw 0;
+}
+
+.service-detail .service-detail-content .remark-container .remark-box {
+    width: 40vw;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-detail .service-detail-content .remark-container .remark-box .icon-ygo-remark {
+    width: 4.27vw;
+    height: 4.27vw;
+    font-size: 4.27vw;
+    display: inline-block;
+    margin-right: 4.27vw;
+}
+
+.service-detail .service-detail-content .remark-container .remark-box span {
+    font-size: 4vw;
+    color: #3a3a3a;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+
+/*edwin add*/
+
+
+/*.service-base {*/
+
+
+/*padding: 8vw 0 10.7vw 4.27vw;*/
+
+
+/*}*/
+
+.service-base .service-name {
+    color: #3a3a3a;
+    font-size: 5.3vw;
+    font-weight: 500;
+    font-weight: 600;
+}
+
+.service-base .service-info {
+    font-size: 4vw;
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.service-base .service-info span {
+    margin-left: 4.2vw;
+}
+
+.service-base .service-info .y-home-language-icon {
+    display: inline-block;
+    border-radius: 50%;
+    height: 3.7vw;
+    width: 4vw;
+    margin-top: 0;
+}
+
+/*  edwin add*/
+
+.service-detail .service-header {
+    position: fixed;
+    height: 44px;
+    top: 0!important;
+    display: flex;
+    width: 100%;
+    z-index: 5;
+    align-items: center;
+    padding-top: 20px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.service-detail .service-header button:nth-of-type(1) {
+    position: absolute;
+    left: 4.26vw;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
+.service-detail .service-header .icon-return-bold:before {
+    font-size: 4.53vw;
+}
+
+.service-detail .service-header .icon-return-bold.wColor{
+    color: #ffffff;
+}
+
+.service-detail .service-header .icon-return-bold.bColor{
+    color: #3a3a3a;
+}
+
+.service-detail .service-header .icon-share:before{
+    font-size: 4.53vw;
+}
+
+.service-detail .service-header .icon-share.wColor{
+    color: #ffffff;
+}
+
+.service-detail .service-header .icon-share.bColor{
+    color: #3a3a3a;
+}
+
+.service-detail .service-header button:nth-of-type(2) {
+    position: absolute;
+    right: 15.2vw;
+    color: #ffffff;
+    padding: 0;
+    width: auto;
+    margin: 0;
+}
+
+.service-detail .service-header #favImg{
+    position: absolute;
+    right: 4.26vw;
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.service-detail .service-header .icon-collect{
+    color: #ffffff;
+}
+
+.service-detail .service-header #favImg:before{
+    font-size: 4.53vw;;
+}
+
+.service-detail .service-header #favImg.wColor{
+    color:#ffffff;
+}
+
+.service-detail .service-header #favImg.bColor{
+    color:#3a3a3a;
+}
+
+.service-detail .service-detail-footer {
+    height: 14.8vw;
+    position: fixed;
+    bottom: 0;
+    background-color: rgba(238, 0, 0, 0.9);
+    width: 100%;
+    z-index: 5;
+    display: flex;
+}
+
+.service-detail .service-detail-footer .chinease-order {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.service-detail .service-detail-footer .chinease-order span {
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-footer .taxi {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.service-detail .service-detail-footer .taxi span {
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: 600
+}
+
+.service-detail .service-detail-footer .ten-taxi {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.service-detail .service-detail-footer .ten-taxi span {
+    color: #ffffff;
+    font-size: 4vw;
+    font-weight: 500
+}
+
+.service-detail .service-detail-content {
+    background-color: #f7f1f1;
+    top: 0;
+}
+
+.service-detail .service-detail-content .img-container {
+    position: relative;
+}
+
+.service-detail .service-detail-content .img-container .guodu {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    height: 12.26vw;
+    background: linear-gradient(rgba(247, 241, 241, 0) 0%, rgba(247, 241, 241, 1) 82%);
+    transform: translateZ(0);
+}
+
+.service-detail .service-detail-content .service-base {
+    position: relative;
+    width: 91.46vw;
+    left: 4.26vw;
+    background-color: #fff;
+    margin-top: -10.93vw;
+    padding: 0 5.06vw 0 5.06vw;
+    border-radius: 1.33vw 1.33vw 1.33vw 1.33vw;
+    z-index: 10;
+    webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 5.33vw rgba(0, 0, 0, 0.1);
+}
+
+.service-detail .service-detail-content .service-base .service-name {
+    color: #3a3a3a;
+    font-size: 4.8vw;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 5.33vw;
+    line-height: 5.33vw;
+    font-weight: 600;
+}
+
+.service-detail .service-detail-content .service-base .service-info {
+    font-size: 3.46vw;
+    color: #757576;
+    position: relative;
+    margin-top: 2.13vw;
+    line-height: 3.48vw;
+    font-weight: 400;
+}
+
+.service-detail .service-detail-content .service-base .per-capita {
+    margin-top: 3.73vw;
+    padding-bottom: 5.33vw;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.service-detail .service-detail-content .service-base .per-capita label:nth-of-type(1) {
+    font-size: 5.33vw;
+    color: #3a3a3a;
+    line-height: 5.43vw;
+    font-weight: 500;
+    display: inline-flex;
+}
+
+.service-detail .service-detail-content .service-base .per-capita label:nth-of-type(1) span {
+    font-size: 3.2vw;
+}
+
+.service-detail .service-detail-content .service-base .per-capita label:nth-of-type(2) {
+    color: #757576;
+    font-size: 3.2vw;
+}
+
+.service-detail .service-detail-content .service-order-in {
+    padding-bottom: 5.86vw;
+    padding-top: 5.86vw;
+}
+
+.service-detail .service-detail-content .service-order-in p {
+    margin: 0;
+}
+
+.service-detail .service-detail-content .service-order-info {
+    height: 27.2vw;
+    width: 91.46vw;
+    left: 4.26vw;
+    position: relative;
+    border-radius: 0px 0px 1.33vw 1.33vw;
+    background-color: #ffffff;
+}
+
+.service-detail .service-detail-content .service-order-in div {
+    padding: 5.86vw 6.66vw 5.86vw 5.33vw;
+}
+
+.service-detail-content .service-order-in .brief-content p {
+    margin: 0;
+}
+
+.service-detail-content .service-order-in .brief-content .detail {
+    color: #0073ff
+}
+
+.service-detail-content .service-order-in .brief-content {
+    margin: 0;
+    font-size: 3.46vw;
+    color: #757576;
+}
+
+.service-detail-content .reservation {
+    width: 91.46vw;
+    margin: 2.66vw 0 0 4.26vw;
+    border-radius: 1.33vw 1.33vw;
+    position: relative;
+}
+
+.service-detail-content .reservation .reservation-hear {
+    height: 14.26vw;
+    width: 100%;
+    background-color: #fcfafa;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+.service-detail-content .reservation .reservation-hear span:nth-of-type(1) {
+    position: absolute;
+    left: 5.2vw;
+    font-size: 3.2vw;
+    color: #757576;
+    font-weight: 400;
+    line-height: 14.26vw;
+}
+
+.service-detail-content .reservation .reservation-hear span:nth-of-type(2) {
+    margin-right: 10.66vw!important;
+}
+
+.service-detail-content .reservation .reservation-hear .header{
+    border-radius: 2.26vw;
+    font-size: 3.2vw;
+    line-height: 4.4vw;
+    padding: 0 1.86vw;
+}
+
+.service-detail-content .reservation .reservation-hear .header.min{
+    border: solid 1px #ff4c4c;
+    color: #ff4c4c;
+    position: relative;
+    margin-right: 1.33vw;
+}
+
+.service-detail-content .reservation .reservation-hear .header.present{
+    border: solid 1px #9d66cc;
+    color: #9d66cc;
+    position: relative;
+    margin-right: 1.33vw;
+}
+
+.service-detail-content .reservation .reservation-hear .header.discount{
+    border: solid 1px #e3a155;
+    color: #e3a155;
+    position: relative;
+    margin-right: 1.33vw;
+}
+
+.service-detail-content .reservation .reservation-hear .icon-ygo-unfold {
+    color: #757576;
+    font-size: 3.2vw;
+    position: absolute;
+    right: 5.06vw;
+    line-height: 14.26vw;
+}
+
+.icon-ygo-fold {
+    color: #757576;
+    font-size: 3.2vw;
+    position: absolute;
+    right: 5.06vw;
+    line-height: 14.26vw;
+}
+
+.service-detail-content .reservation .reservation-content {
+    background-color: #fcfafa;
+    padding: 0 0 5.33vw 0;
+}
+
+.service-detail-content .reservation .reservation-content div {
+    padding-top: 2.13vw;
+}
+
+.service-detail-content .reservation .reservation-content .name{
+    border-radius: 2.26vw;
+    font-size: 3.2vw;
+    line-height: 4.4vw;
+    padding: 0 1.86vw;
+    font-weight: 400;
+    margin-left: 5.2vw;
+}
+
+.service-detail-content .reservation .reservation-content .name.min{
+    color: #ff4c4c;
+    border: solid 1px #ff4c4c;
+}
+.service-detail-content .reservation .reservation-content .name.present{
+    color: #9d66cc;
+    border: solid 1px #9d66cc;
+}
+.service-detail-content .reservation .reservation-content .name.discount{
+    color: #e3a155;
+    border: solid 1px #e3a155;
+}
+
+.service-detail-content .reservation .reservation-content .content{
+    border-radius: 2.26vw;
+    font-size: 3.2vw;
+    line-height: 4.4vw;
+    padding: 0 1.86vw;
+    font-weight: 400;
+    margin-left: 5.2vw;
+}
+
+.service-detail-content .reservation .reservation-content .sample {
+    margin-left: 2.8vw;
+    font-size: 3.2vw;
+    color: #3a3a3a;
+    font-weight: 400;
+}
+
+.service-detail-content .reservation .appoint {
+    width: 100%;
+    height: 14.26vw;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.service-detail-content .reservation .appoint img {
+    width: 5.46vw;
+    height: 4.53vw;
+}
+
+.service-detail-content .reservation .appoint span {
+    margin-left: 3.86vw;
+    color: #0072ff;
+}
+
+
+
+.service-detail .service-detail-content .logo-container {
+    margin-top: 2.66vw;
+    background-color: rgb(252, 250, 250);
+    width: 91.46vw;
+    left: 4.26vw;
+    position: relative;
+    border-radius: 1.33vw 1.33vw 1.33vw 1.33vw;
+    box-shadow: 0 0 5.33vw rgba(0, 0, 0, 0.1);
+}
+
+.service-detail .service-detail-content .logo-container .svg-container {
+    height: 14.4vw;
+    background-color: #ffffff;
+    border-radius: 0px 0px 1.3vw 1.3vw;
+}
+
+.service-detail .service-detail-content .logo-container .onesvg {
+    border-radius: 1.3vw;
+    margin-top: 0;
+    padding: 0;
+}
+
+.service-detail .service-detail-content .location-box {
+    margin-top: 4vw;
+    background-color: #fcfafa;
+}
+
+.service-detail .service-detail-content .address-box {
+    background-color: #fff;
+    padding: 5.33vw 4.4vw 4vw 4.4vw;
+}
+
+.service-detail .service-detail-content .address-box .stadiums{
+    font-size: 4vw;
+    color: #3a3a3a;
+    font-weight: 600;
+    margin: 0 0 5.66vw 0;
+    padding-top: 4vw;
+    border-top: 1px solid #e8e8e8;
+}
+
+.service-detail .service-detail-content .address-box .stadiums-content{
+    color: #757576;
+    line-height: 6.26vw;
+    font-size: 3.46vw;
+    margin: 4vw 0 4.53vw 0;
+}
+
+
+.service-detail .service-detail-content .address-box .info {
+    margin: 0;
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 3.73vw;
+    line-height: 4vw;
+    padding-bottom: 5.33vw;
+}
+
+.service-detail .service-detail-content .address-box .bo {
+    padding-bottom: 0;
+}
+
+.service-detail .service-detail-content .address-box .sub-title {
+    margin: 0 0 6.13vw 0;
+    font-size: 4vw;
+    font-weight: 600;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 4vw;
+    color: #3a3a3a;
+}
+
+.service-detail .service-detail-content .address-box .address-info {
+    margin: 6.13vw 0 5.33vw 0;
+    font-size: 3.46vw;
+    line-height: 3.73vw;
+    color: #757576;
+    line-height: 6.26vw;
+}
+
+.service-detail .service-detail-content .traffic-info {
+    width: 100%;
+}
+
+.service-detail .service-detail-content .traffic-info .cn-addr {
+    padding: 5.33vw 0 5.33vw 0;
+    border-bottom: 1px solid #e8e8e8;
+    margin: 0 4.4vw 0 4.4vw;
+    font-size: 3.73vw;
+    color: #3a3a3a;
+}
+
+.service-detail .service-detail-content .traffic-info .sub-title {
+    margin: 4vw 0 6.13vw 4.26vw;
+    font-size: 4vw;
+    color: #3a3a3a;
+    font-weight: 500;
+}
+
+.service-detail .service-detail-content .traffic-info .address-info {
+    margin: 6.13vw 4.26vw 0 4.26vw;
+    padding-bottom: 6.13vw;
+    font-size: 3.46vw;
+    color: #757576;
+}
+
+.service-detail .service-detail-content .info-container {
+    margin-top: 2.66vw;
+    background-color: #ffffff;
+}
+
+.service-detail .service-detail-content .info-container .title {
+    height: 12vw;
+    background-color: #fcfafa;
+    padding-left: 4.26vw;
+    display: flex;
+    align-items: center;
+}
+
+.service-detail .service-detail-content .info-container .title span {
+    margin-left: 3.2vw;
+}
+
+.service-detail .service-detail-content .info-container .phone-box {
+    padding-left: 4.26vw;
+    margin-top: 4vw;
+}
+
+.service-detail .service-detail-content .info-container .social-contacts-box {
+    padding-left: 4.26vw;
+}
+
+.service-detail .service-detail-content .info-container .open-box {
+    padding-left: 4.26vw;
+}
+
+
+/* platform ios*/
+
+.platform-ios .service-desc ion-content {
+    margin-top: 3.1vw;
+}
+
+.service-detail .service-header button.activated,
+.service-detail .service-detail-content .service-map .service-way .col.activated {
+    opacity: 0.7;
+}
+
+.service-detail .service-detail-footer .chinease-order.activated,
+.service-detail .service-detail-footer .taxiactivated {
+    background-color: rgba(238, 0, 0, 0.7);
+    opacity: 0.7;
+}
+
+
+/*
+  百度地图 去掉LOGO
+ */
+#container-123 .BMap_cpyCtrl{
+  display: none;
+}
+#container-123 .anchorBL{
+  display: none;
+}

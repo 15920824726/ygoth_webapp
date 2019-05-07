@@ -1,0 +1,62 @@
+.order-result ion-header-bar{
+  background-color: #f7f1f1;
+}
+
+.order-result ion-content{
+  background-color: #f7f1f1;
+}
+
+.order-result ion-content .scroll{
+  height: 100%;
+}
+
+.order-result ion-header-bar .icon-return-bold:before{
+  font-size: 4.53vw;
+}
+
+.order-result ion-content .logo-wrapper{
+  padding-top:12vw;
+  margin-bottom:6.66vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+}
+
+.order-result ion-content .logo-wrapper img{
+  width:21.06vw;
+  height:21.06vw;
+
+}
+
+.order-result ion-content .promt{
+  text-align:center;
+  font-size:5.33vw;
+  line-height:5.33vw;
+  font-weight:bold;
+  margin-bottom:4vw;
+
+}
+
+.order-result ion-content .ad-wrapper{
+  margin-top:8vw;
+
+}
+
+.order-result ion-content .ad-wrapper img{
+  width:100%;
+}
+
+.order-result ion-content .footer{
+  position:absolute;
+  bottom:3.2vw;
+  width:91.46vw;
+  height:14.66vw;
+  line-height:14.66vw;
+  text-align:center;
+  margin-left:4.26vw;
+  background-color:#3a3a3a;
+  color:white;
+  border-radius:1.33vw;
+
+}

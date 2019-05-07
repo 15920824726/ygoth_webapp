@@ -1,0 +1,22 @@
+<ion-view class="pos-menu">
+    <ion-content>
+        <div class="orders_header">
+            <div class="order-cover">
+                <img src="{{base + merchant.background}}" alt="store" class="store-picture">
+            </div>
+            <div id="order_info" class="order_info">
+                <p class="store-name">{{merchant.name}}</p>
+                <p id="category-name" class="category-name">{{merchant.original_name}}</p>
+            </div>
+        </div>
+        <div class="menu-list">
+            <div ng-repeat="item in menus" class="item item-thumbnail-left" ng-click="confirm(item)">
+                <img ng-src="{{base+item.thumb}}" class="menu-thumb">
+                <h2>{{item.title}}</h2>
+                <p class="origin-title">{{item.origin_title}}</p>
+                <p class="baht">฿ {{item.price/100}}</p>
+                <!-- <p class="rmb">约￥{{item.cnPrice}}</p> -->
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

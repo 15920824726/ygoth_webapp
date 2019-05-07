@@ -1,0 +1,71 @@
+<ion-view class="order-confirm">
+  <!--<ion-header-bar>-->
+    <!--<button class="button-icon icon icon-return-bold" ng-click="goOrderFood()"></button>-->
+    <!--<h1 class="title">{{translations.ORDER_FOOD_GO}}{{translations.OK}}</h1>-->
+  <!--</ion-header-bar>-->
+  <ion-content class="content" style="overflow: hidden" overflow-scroll="true">
+    <div class="title" >
+      <p>-{{translations.CONFIRM_ORDER}}-</p>
+    </div>
+    <div class="desk-info">
+      <span>{{translations.ORDER_DESKTOP}}</span>
+      <span>{{position}}</span>
+    </div>
+    <!--<div class="order-list">-->
+      <!--<div class="list-content">-->
+        <!--<ion-scroll scrollbar-x="false"-->
+                    <!--scrollbar-y="false">-->
+          <!--<div class="order-item" ng-repeat="product in products">-->
+            <!--<div class="item-left">-->
+              <!--<p class="name">{{product.title}}</p>-->
+              <!--<div class="trans_colun_price">-->
+                <!--<span class="trans_name">{{product.origin_title}}</span>-->
+              <!--</div>-->
+            <!--</div>-->
+            <!--<div class="item-right">-->
+              <!--<span class="price">{{product.price/100}}</span>-->
+              <!--<span class="quantity">{{product.quantity}}</span>-->
+            <!--</div>-->
+          <!--</div>-->
+          <!--<div class="total">-->
+            <!--<span class="quantity">{{total_quantity}}份</span>-->
+            <!--<span class="price">฿{{total_price/100}}</span>-->
+            <!--<span class="all">合计</span>-->
+          <!--</div>-->
+        <!--</ion-scroll>-->
+
+      <!--</div>-->
+    <!--</div>-->
+
+    <div class="complete-body">
+      <div class="complete-content">
+        <div class="list-body">
+          <div class="order-item" ng-repeat="product in products">
+            <div class="item-left">
+              <p class="name">{{product.title}}</p>
+              <div class="trans_colun_price">
+                <span class="trans_name">{{product.origin_title}}</span>
+              </div>
+            </div>
+            <div class="item-right">
+              <span class="price">{{product.price/100}}</span>
+              <span class="quantity">{{product.quantity}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="total">
+          <span class="quantity">{{total_quantity}}{{translations.ONE_COLUMN}}</span>
+          <span class="price">฿{{total_price/100}}</span>
+          <span class="all">{{translations.ALL_ORDER}}</span>
+        </div>
+      </div>
+    </div>
+    <!--<div class="order-ad">-->
+      <!--<img src="{{imageSrc}}">-->
+    <!--</div>-->
+    <div ng-click="goResult()" class="order-submit">
+      {{translations.CONFIRM_SUBMIT}}
+    </div>
+  </ion-content>
+
+</ion-view>

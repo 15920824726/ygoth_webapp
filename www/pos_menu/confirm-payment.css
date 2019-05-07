@@ -1,0 +1,247 @@
+.confirm-payment ion-header-bar {
+    background-color: #1b1a1f;
+}
+
+.confirm-payment ion-header-bar button {
+    color: #ffffff;
+}
+
+.confirm-payment ion-header-bar h1 {
+    color: #ffffff;
+}
+
+.confirm-payment ion-header-bar .icon-return-bold:before {
+    font-size: 4.53vw;
+}
+
+.confirm-payment ion-content {
+    background-color: #f7f1f1;
+}
+
+.confirm-payment .content>.scroll {
+    height: 100%;
+}
+
+.confirm-payment ion-content .ad-header {
+    width: 100%;
+    height: 16vw;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.confirm-payment ion-content .ad-header img {
+    height: 10.66vw;
+    width: 10.66vw;
+    margin-left: 4vw;
+}
+
+.confirm-payment ion-content .ad-header span:nth-of-type(1) {
+    font-size: 3.46vw;
+    font-weight: 400;
+    color: #757576;
+    margin-left: 4vw;
+}
+
+.confirm-payment ion-content .ad-header span:nth-of-type(2) {
+    color: #ffffff;
+    font-size: 3.2vw;
+    font-weight: 600;
+    padding: 1.86vw 3.73vw;
+    background-color: #241d4f;
+    border-radius: 5px;
+    transform: scale(0.91);
+    position: absolute;
+    right: 4vw;
+    top: 2.66vw;
+}
+
+.confirm-payment ion-content .title {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: #757576;
+    font-size: 3.73vw;
+    line-height: 3.73vw;
+    margin-top: 9vw;
+}
+
+.confirm-payment ion-content .order-number {
+    padding: 4vw 3.33vw;
+    border-radius: 5px;
+    width: 91.46vw;
+    height: 23vw;
+    margin: 0 auto;
+    margin-top: 5vw;
+    left: 4vw;
+    background-color: #ffffff;
+    color: #757576;
+    font-size: 3.46vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.confirm-payment ion-content .order-number>div {
+    /* padding: 5.33vw 2.66vw 4.53vw 3.33vw; */
+    display: flex;
+    justify-content: space-between;
+    font-weight: 400;
+    line-height: 3.46vw;
+}
+
+.confirm-payment ion-content .complete-body {
+    margin: 0 auto;
+    width: 91.46vw;
+    margin-top: 4vw;
+    border-radius: 5px;
+}
+
+.confirm-payment ion-content .complete-body .list-body {
+    max-height: 57vw;
+    overflow: scroll
+}
+
+.confirm-payment ion-content .complete-body .complete-content {
+    background-color: #ffffff;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.confirm-payment ion-content .complete-body .total {
+    height: 11.73vw;
+    line-height: 11.73vw;
+    width: 100%;
+    border-top: 1px solid #e8e8e8;
+}
+
+.confirm-payment ion-content .complete-body .total .quantity {
+    color: #ff9217;
+    margin-right: 3.73vw;
+    font-size: 4vw;
+    float: right;
+}
+
+.confirm-payment ion-content .complete-body .total .price {
+    color: #ff9217;
+    font-size: 4vw;
+    float: right;
+    margin-right: 6.66vw;
+}
+
+.confirm-payment ion-content .complete-body .total .all {
+    color: #757576;
+    font-size: 3.46vw;
+    float: right;
+    margin-right: 7.46vw;
+}
+
+.confirm-payment ion-content .complete-body .order-item {
+    position: relative;
+    border-bottom: 1px solid #e8e8e8;
+    padding: 3.73vw 0 0 3.73vw;
+    padding-bottom: 3.73vw;
+    font-size: 0;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-left {
+    width: 70%;
+    display: inline-block;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-left .trans_colun_price {
+    margin-top: 1.33vw;
+    word-break: break-all;
+    overflow: auto;
+}
+
+.confirm-payment ion-content .complete-body .order-item .trans_name {
+    font-size: 3.2vw;
+    line-height: 5.33vw;
+    color: #757576;
+    display: block;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-right {
+    width: 30%;
+    height: 100%;
+    float: right;
+    text-align: right;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-right .price {
+    font-size: 4vw;
+    color: #3a3a3a;
+    display: inline-block;
+    margin-right: 6.66vw;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-right .quantity {
+    font-size: 4vw;
+    display: inline-block;
+    color: #3a3a3a;
+    margin-right: 7vw;
+}
+
+.confirm-payment ion-content .complete-body .order-item .item-left p {
+    font-size: 4vw;
+    line-height: 5.33vw;
+    color: #3a3a3a;
+    margin-bottom: 0;
+}
+
+.confirm-payment ion-content .order-ad {
+    position: absolute;
+    bottom: 21.06vw;
+    width: 100%;
+}
+
+.confirm-payment ion-content .order-ad img {
+    width: 100%;
+    height: 35.6vw;
+}
+
+.confirm-payment ion-footer {
+    background: #f7f1f1;
+    position: fixed;
+    bottom: 0vw;
+    z-index: 100;
+}
+
+.confirm-payment ion-footer .order-submit {
+    width: 91.46vw;
+    margin-left: 4.26vw;
+    margin-right: 4.26vw;
+    height: 14.66vw;
+    line-height: 14.66vw;
+    text-align: center;
+    background-color: #FF9214;
+    border-radius: 1.33vw;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.confirm-payment ion-footer .order-submit span {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 4.8vw;
+}
+
+.confirm-payment .merchant-name {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.confirm-payment .merchant-name .chn {
+    font-size: 4.5vw;
+    color: #3a3a3a;
+    font-weight: 600;
+    line-height: 6.13vw;
+    margin: 5.86vw 0 0 0;
+}
+
+.confirm-payment .merchant-name .eng {
+    font-size: 3vw;
+    color: #515151;
+    margin-top: 10px;
+}

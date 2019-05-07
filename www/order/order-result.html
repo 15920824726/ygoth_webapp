@@ -1,0 +1,23 @@
+<ion-view class="order-result">
+  <!--<ion-header-bar>-->
+    <!--<button class="button-icon icon icon-return-bold" ng-click="return()"></button>-->
+  <!--</ion-header-bar>-->
+  <ion-content>
+    <div class="logo-wrapper" >
+      <img ng-if="result" src="img/confirm@2x.png">
+      <img ng-if="!result" src="img/warn@2x.png">
+    </div>
+    <div ng-if="result" class="promt">
+      {{translations.SUCCESS_TO_POST}}
+    </div>
+    <div ng-if="!result" class="promt">
+      {{translations.FAILED_TO_SUBMIT}}
+    </div>
+    <div class="ad-wrapper">
+      <img src="{{imageSrc}}">
+    </div>
+    <div class="footer" ng-click="goFirstPage()">
+      {{translations.RETURN_FIRSTPAGE}}
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view class="confirm-payment">
+    <ion-content class="content" scroll="false">
+        <div class="merchant-name">
+            <p class="chn">职业培训中心</p>
+            <p class="eng">VOCATIONAL TRAINING CENTER</p>
+        </div>
+        <div class="title">
+            <p>-{{translations.CHECK_AFTER_PAY}}-</p>
+        </div>
+        <div class="order-number">
+            <div>
+                <span>{{translations.ORDER_TIME}}</span>
+                <span>{{created_at | amDateFormat:'YYYY.MM.DD HH:mm:ss'}}</span>
+            </div>
+            <div>
+                <span>{{translations.ORDER_NUMBER}}</span>
+                <span>{{order_number}}</span>
+            </div>
+        </div>
+        <div class="complete-body">
+            <div class="complete-content">
+                <div class="list-body">
+                    <div class="order-item" ng-repeat="product in orderData.products">
+                        <div class="item-left">
+                            <p class="name">{{product.title}}</p>
+                            <div class="trans_colun_price">
+                                <span class="trans_name">{{product.origin_title}}</span>
+                            </div>
+                        </div>
+                        <div class="item-right">
+                            <span class="price">฿{{product.price/100}}</span>
+                            <span class="quantity">{{product.quantity}}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="total">
+                    <span class="quantity">{{orderData.total_quantity}}{{translations.ONE_COLUMN}}</span>
+                    <span class="price">฿{{orderData.total_price/100}}</span>
+                    <span class="all">{{translations.ALL_ORDER}}</span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+    <ion-footer>
+        <div ng-click="makePayment()" class="order-submit">
+            <span>{{translations.PAY}}&nbsp ฿{{orderData.total_price/100}}</span>
+        </div>
+    </ion-footer>
+</ion-view>

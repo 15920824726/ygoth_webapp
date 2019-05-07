@@ -1,0 +1,93 @@
+.order-choose .order-choose-content{
+    top:0!important;
+}
+
+.order-choose .order-choose-content .scroll{
+    height: 100%;
+}
+
+.order-choose .order-choose-content .icon-return-bold:before{
+    font-size: 4.53vw;
+}
+
+.order-choose .order-choose-content .title{
+    position: fixed;
+    height: 17.06vw;
+    top: 0!important;
+    display: flex;
+    width: 100%;
+    z-index: 5;
+    align-items: center;
+    padding-top: 5.33vw;
+}
+
+
+.order-choose .order-choose-content .title button{
+    color: #fff;
+    left: 4.26vw;
+}
+
+.order-choose .order-choose-content .chinese-order{
+    left: 4.26vw;
+    position: absolute;
+    bottom: 44.93vw;
+    width: 91.46vw;
+    height: 29.33vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 1.33vw;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding-right: 5.06vw;
+    justify-content: space-between;
+}
+
+.order-choose .order-choose-content .pay-order{
+    left: 4.26vw;
+    position: absolute;
+    bottom: 11.6vw;
+    width: 91.46vw;
+    height: 29.33vw;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 1.33vw;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    padding-right: 5.06vw;
+    justify-content: space-between;
+}
+
+.order-choose .order-choose-content .footer{
+    position: absolute;
+    top: 116.53vw;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    z-index: 5;
+}
+
+.order-choose .order-choose-content .chinese-order img:nth-of-type(1),.pay-order img:nth-of-type(1){
+    width: 16.8vw;
+    height: 16.8vw;
+    margin-left: 5.06vw;
+}
+
+.order-choose .order-choose-content .chinese-order img:nth-of-type(2),.pay-order img:nth-of-type(2){
+    width: 7.2vw;
+    height: 7.2vw;
+    position: absolute;
+    right: 5.06vw;
+    top:10.5vw;
+}
+
+.order-choose .order-choose-content .chinese-order span,.pay-order span{
+    font-size: 5.33vw;
+    color: #3a3a3a;
+    font-weight: 500;
+    left: 31.73vw;
+    line-height: 29.33vw;
+    position: absolute;
+}

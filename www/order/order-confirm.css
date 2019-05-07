@@ -1,0 +1,174 @@
+.order-confirm ion-header-bar{
+  background-color: #f7f1f1;
+}
+
+.order-confirm ion-header-bar .icon-return-bold:before{
+  font-size: 4.53vw;
+}
+
+.order-confirm ion-content{
+  background-color: #f7f1f1;;
+}
+
+.order-confirm .content >.scroll{
+  height: 100%;
+}
+
+.order-confirm ion-content .title{
+  position:relative;
+  top:0;
+  width:100%;
+  text-align:center;
+  color:#757576;
+  font-size:3.73vw;
+  line-height:3.73vw;
+  padding-top:6vw;
+}
+
+.order-confirm ion-content .desk-info{
+  color: #ff9217;
+  margin: 5vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.order-confirm ion-content .desk-info span:nth-of-type(1){
+  font-size: 3.73vw;
+  font-weight: 400;
+}
+
+.order-confirm ion-content .desk-info span:nth-of-type(2) {
+  font-size: 5.96vw;
+  font-weight: 600;
+  margin-left: 2.66vw;
+}
+
+.order-confirm  ion-content .complete-body{
+  position: absolute;
+  left: 4vw;
+  right: 4vw;
+  top:25vw;
+}
+
+.order-confirm  ion-content .complete-body .list-body{
+  max-height: 90vw;
+  overflow: scroll
+}
+
+
+.order-confirm  ion-content .complete-body .complete-content{
+  background-color: #ffffff;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.order-confirm  ion-content .complete-body .total{
+  height:11.73vw;
+  line-height:11.73vw;
+  width:100%;
+  border-top: 1px solid #e8e8e8;
+}
+
+.order-confirm  ion-content .complete-body .total .quantity{
+  color:#ff9217;
+  margin-right:3.73vw;
+  font-size:4vw;
+  float:right;
+}
+
+.order-confirm  ion-content .complete-body .total .price{
+  color:#ff9217;
+  font-size:4vw;
+  float:right;
+  margin-right: 6.66vw;
+}
+
+.order-confirm  ion-content .complete-body .total .all{
+  color:#757576;
+  font-size: 3.46vw;
+  float:right;
+  margin-right:7.46vw;
+}
+
+
+.order-confirm  ion-content .complete-body .order-item{
+  position:relative;
+  border-bottom:1px solid #e8e8e8;
+  padding:3.73vw 0 0 3.73vw;
+  padding-bottom:3.73vw;
+  font-size:0;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-left{
+  width:70%;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-left .trans_colun_price{
+  margin-top:1.33vw;
+  word-break:break-all;
+  overflow:auto;
+}
+
+.order-confirm  ion-content .complete-body .order-item .trans_name{
+  font-size:3.2vw;
+  line-height:5.33vw;
+  color:#757576;
+  display:block;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-right{
+  width:30%;
+  float:left;
+  height:100%;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-right .price{
+  position:absolute;
+  bottom:5.33vw;
+  right:16.66vw;
+  font-size:4vw;
+  color:#3a3a3a;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-right .quantity{
+  position:absolute;
+  bottom:5.33vw;
+  right:5.06vw;
+  font-size:4vw;
+  color:#3a3a3a;
+}
+
+.order-confirm  ion-content .complete-body .order-item .item-left p{
+  font-size:4vw;
+  line-height:5.33vw;
+  color:#3a3a3a;
+  margin-bottom: 0;
+}
+
+.order-confirm ion-content .order-ad{
+  position:absolute;
+  bottom:21.06vw;
+  width:100%;
+}
+
+.order-confirm ion-content .order-ad img{
+  width:100%;
+  height: 35.6vw;
+}
+
+.order-confirm ion-content .order-submit{
+  position:absolute;
+  bottom:3.2vw;
+  width:91.46vw;
+  margin-left:4.26vw;
+  margin-right:4.26vw;
+  height:14.66vw;
+  line-height:14.66vw;
+  text-align:center;
+  background-color:#FF9214;
+  border-radius:1.33vw;
+  color:white;
+}
+

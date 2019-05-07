@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="manifest" href="manifest.json">
+    <link href="css/icomoon.css" rel="stylesheet">
+
+    <!-- un-comment this code to enable service worker
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js')
+          .then(() => console.log('service worker installed'))
+          .catch(err => console.log('Error', err));
+      }
+    </script>-->
+
+    <link href="lib/ionic/css/ionic.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="merchant/merchant.css" rel="stylesheet">
+    <link href="order/order-food.css" rel="stylesheet">
+    <link href="order/order-confirm.css" rel="stylesheet">
+    <link href="order/order-result.css" rel="stylesheet">
+    <link href="order/user-select.css" rel="stylesheet">
+    <link href="order/order-confirm-tel.css" rel="stylesheet">
+    <link href="topup/topup.css" rel="stylesheet">
+    <link href="pos_menu/menu.css" rel="stylesheet">
+    <link href="pos_menu/confirm-payment.css" rel="stylesheet">
+    <link href="ikm/ikm.css" rel="stylesheet">
+    <link href="ikm/ikm-order.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script type="text/javascript" src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="lib/ionic/js/ionic.bundle.min.js"></script>
+    <script src="lib/angular-translate/angular-translate.min.js"></script>
+    <script src="lib/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <script src="lib/angular-moment/angular-moment.min.js"></script>
+    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/socket.io-client/dist/socket.io.js"></script>
+    <script src="lib/angular-socket-io/socket.js"></script>
+    <!--<script src="https://maps.google.cn/maps/api/js?key=AIzaSyDtWNX_y9wy5-GI_a6LnVlol92NwwixqO4&sensor=false"></script>-->
+    <!--<script charset="utf-8" src="https://map.qq.com/api/js?v=2.exp&key=FQRBZ-NZU3U-RYOVH-BTBHZ-YTAW2-LVB6A"></script>-->
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=iKDX7mdNVw3tzefrABKyBPxPLnX1BxQ9"></script>
+
+    <script src="common/config.js"></script>
+    <script src="common/constant.js"></script>
+    <script src="common/directives.js"></script>
+    <script src="common/filters.js"></script>
+    <script src="common/services/services.js"></script>
+
+    <script src="merchant/module.js"></script>
+    <script src="merchant/merchant.js"></script>
+    <script src="topup/module.js"></script>
+    <script src="topup/topup-ctrl.js"></script>
+
+    <script src="order/module.js"></script>
+    <script src="order/order-food-ctrl.js"></script>
+    <script src="order/order-confirm.js"></script>
+    <script src="order/order-result.js"></script>
+    <script src="order/user-select-ctrl.js"></script>
+    <script src="order/order-confirm-tel.js"></script>
+
+    <script src="pos_menu/module.js"></script>
+    <script src="pos_menu/menu-ctrl.js"></script>
+    <script src="pos_menu/confirm-payment.js"></script>
+
+    <script src="ikm/module.js"></script>
+    <script src="ikm/ikm-ctrl.js"></script>
+    <script src="ikm/ikm-order.js"></script>
+
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--<script src="cordova.js"></script>-->
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <!--<ion-pane>-->
+      <!--<ion-header-bar class="bar-stable">-->
+        <!--<h1 class="title">Ionic Blank Starter</h1>-->
+      <!--</ion-header-bar>-->
+      <!--<ion-content ng-controller="starterController">-->
+        <!--<p ng-click="alertEdwin()">alert</p>-->
+        <!--<p>{{translations.MANGU}}</p>-->
+      <!--</ion-content>-->
+    <!--</ion-pane>-->
+  <ion-nav-view></ion-nav-view>
+  </body>
+</html>

@@ -1,0 +1,294 @@
+p{
+    margin-bottom: 0;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.ikm ion-content {
+    bottom: 55px;
+}
+
+.ikm ion-content .scroll{
+    height: 100%;
+}
+
+.ikm ion-content .header {
+    position: relative;
+    width: 100%;
+    padding-top: 4.53vw;
+    font-size: 5.066vw;
+    font-weight: 800;
+    line-height: 26px;
+    color: rgba(19, 19, 19, 1);
+    text-align: center;
+    background: rgba(237, 237, 237, 1);
+}
+
+.ikm ion-content .number-block {
+    position: relative;
+    width: 100%;
+    height: 45.86vw;
+    background:rgba(237,237,237,1);
+    padding: 0 5.33vw;
+    box-sizing: border-box;
+}
+
+.ikm ion-content .number-block .welcome{
+    padding-top: 6.66vw;
+    font-size: 6.66vw;
+    font-weight:bold;
+    /*line-height: 11.46vw;*/
+    color:rgba(66,60,72,1);
+    margin-bottom: 0;
+}
+
+.ikm ion-content .number-block .welcome span:nth-of-type(2){
+    color:rgba(26,141,255,1);
+}
+
+
+.ikm ion-content .number-block .tip{
+    position: absolute;
+    top: 4.53vw;
+    left: 61.6vw;
+    font-size: 2.4vw;
+    font-weight:500;
+    line-height:4.26vw;
+    color:rgba(255,255,255,1);
+    background:rgba(26,141,255,1);
+    border-radius:2px;
+    padding: 3px 2px;
+    margin-bottom: 0;
+}
+
+.ikm ion-content .number-block .number{
+    position: relative;
+    width: 100%;
+    height:20.26vw;
+    background:rgba(255,255,255,1);
+    box-shadow:0 0 5.33vw rgba(0,0,0,0.1);
+    opacity:1;
+    border-radius:3px;
+    margin-top: 6.66vw;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.ikm ion-content .number-block .number input{
+    font-size:21px;
+    font-weight:800;
+    line-height:29px;
+    color:rgba(215,209,219,1);
+    display: inline-block;
+    width: 100%;
+}
+
+.ikm ion-content .number-block .number input.hasvalue{
+    font-size:21px;
+    font-weight:800;
+    line-height:29px;
+    color:rgba(26,141,255,1);
+}
+
+.ikm ion-content .number-block .number p{
+    font-size:11px;
+    font-weight:500;
+    line-height:16px;
+    color:rgba(115,109,122,1);
+    margin-bottom: 0;
+}
+
+.ikm ion-content .number-block .number .wrong{
+    color: red;
+}
+
+
+.ikm ion-content .number-block .number img{
+    position: absolute;
+    right: 0;
+    width:92px;
+    height:76px;
+    top:0;
+}
+
+
+.ikm ion-content .price-block {
+    position: relative;
+    width: 100%;
+    min-height: 431px;
+    background:rgba(255,255,255,1);
+    padding: 17px 20px 0 20px;
+    box-sizing: border-box;
+}
+
+.ikm ion-content .price-block .select-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:15px;
+    font-weight:800;
+    line-height:21px;
+    color:rgba(185,185,185,1);
+}
+
+.ikm ion-content .price-block .select-title span:nth-of-type(2){
+    font-size:11px;
+    font-weight:500;
+    line-height:16px;
+    color:rgba(174,172,175,1);
+}
+
+.ikm ion-content .price-block .no-list{
+    display: flex;
+    align-items: center;;
+    justify-content: space-between;
+    margin-top: 23px;
+}
+
+.ikm ion-content .price-block .no-list .no1,
+.ikm ion-content .price-block .no-list .no2{
+    width:158px;
+    height:100px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 20px rgba(0,0,0,0.1);
+    opacity:1;
+    border-radius:3px;
+    display: flex;
+    flex-direction: column;
+    padding: 19px 0 14px 15px;
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+.ikm ion-content .price-block .no-list .no1 .line1,
+.ikm ion-content .price-block .no-list .no2 .line1{
+    width:63px;
+    height:18px;
+    background:rgba(249,249,249,1);
+    opacity:1;
+    border-radius:2px;
+}
+
+.ikm ion-content .price-block .no-list .no1 .line2,
+.ikm ion-content .price-block .no-list .no2 .line2{
+    width:36px;
+    height:12px;
+    background:rgba(249,249,249,1);
+    opacity:1;
+    border-radius:2px;
+}
+
+.ikm ion-content .price-block .no-list .no1 .line3,
+.ikm ion-content .price-block .no-list .no2 .line3{
+    width:105px;
+    height:13px;
+    background:rgba(249,249,249,1);
+    opacity:1;
+    border-radius:2px;
+}
+
+.ikm ion-content .price-block .price-list{
+    display: flex;
+    margin-top: 23px;
+    flex-wrap: wrap;
+}
+
+.ikm ion-content .price-block .price-list .item{
+    width:158px;
+    height:100px;
+    opacity:1;
+    border-radius:3px;
+    padding: 0 15px;
+    margin-bottom: 19px;
+    margin-right: 19px;
+}
+
+
+/*
+    偶数选择器 偶数列 margin-right: 0;
+ */
+.ikm ion-content .price-block .price-list .item:nth-child(2n){
+    margin-right: 0;
+}
+
+.ikm ion-content .price-block .price-list .item .Amount{
+    font-size:21px;
+    font-weight:600;
+    line-height:29px;
+    color:rgba(66,60,72,1);
+    margin-top: 13px;
+    margin-bottom: 0;
+}
+
+.ikm ion-content .price-block .price-list .item .currency{
+    font-size:11px;
+    font-weight:600;
+    line-height:16px;
+    color:rgba(66,60,72,1);
+}
+
+.ikm ion-content .price-block .price-list .item .costs{
+    font-size:11px;
+    font-weight:500;
+    line-height:16px;
+    color:rgba(115,109,122,1);
+    margin-top: 13px;
+}
+
+.ikm ion-content .price-block .price-list .item.selected{
+    background:rgba(26,141,255,1);
+    border:2px solid rgba(26,141,255,1);
+    box-shadow:0px 0px 20px rgba(26,141,255,0.5);
+    color:rgba(255,255,255,1);
+}
+
+.ikm ion-content .price-block .price-list .item.selected .Amount,
+.ikm ion-content .price-block .price-list .item.selected .currency{
+    color:rgba(255,255,255,1);
+}
+
+
+.ikm ion-content .price-block .price-list .item.selected .costs{
+    color:rgba(208,207,249,1);
+}
+
+.ikm ion-footer-bar{
+    height:55px;
+    background:rgba(26,141,255,1);
+    opacity:1;
+    display: flex;
+    align-items: center;
+}
+
+.ikm ion-footer-bar .cost{
+    flex: 3;
+    height: 100%;
+    font-size:12px;
+    font-weight:500;
+    line-height:17px;
+    color:rgba(241,241,255,1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 26px;
+    background:rgba(22,131,239,1);
+}
+
+.ikm ion-footer-bar .confirm{
+    flex: 2;
+    height: 100%;
+    font-size:15px;
+    font-weight:800;
+    line-height:21px;
+    color:rgba(255,255,255,1);
+    background:rgba(26,141,255,1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
