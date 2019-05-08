@@ -1,0 +1,291 @@
+/*
+        penguin-charge module
+ */
+
+.penguin_pay ion-content{
+    background-color: #f2f2f2;;
+}
+
+.penguin_pay ion-content .scroll{
+    height: 100%;
+}
+
+.penguin_pay .pg-title{
+    font-size: 3.2vw;
+    color: #c7c7c7;
+    text-align: center;
+    position: relative;
+    padding-top: 8vw;
+    margin-bottom: 0;
+}
+
+.penguin_pay .pg-logo{
+    position: relative;
+    padding-top: 3.86vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.penguin_pay .pg-logo img{
+    height: 7.73vw;
+}
+
+.penguin_pay .tel-number{
+    position: relative;
+    top: 8vw;
+    width: 91.46vw;
+    margin-left: 4.26vw;
+    height: 22.93vw;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 11.46vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.penguin_pay .tel-number p{
+    font-size: 3.2vw;
+    color: #757576;
+    text-align: center;
+    padding: 3.46vw 0 0 0;
+    margin: 0;
+}
+
+.penguin_pay .tel-number input{
+    display: inline-block;
+    width: 80%;
+    text-align: center;
+    border-radius: 11.46vw;
+    color: #3a3a3a;
+    font-weight: 600;
+    font-size: 5.33vw;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 11vw;
+    height: 10.66vw;
+    z-index: 100;
+}
+
+.penguin_pay .tel-number input.minFont{
+    font-size: 10.66vw;
+}
+
+.penguin_pay .money{
+    position: relative;
+    margin-top: 14.26vw;
+}
+.penguin_pay .money >p{
+    color: #a9a9a9;
+    padding-left: 4.13vw;
+    margin-bottom: 0;
+}
+
+.penguin_pay .money-block{
+    padding:4.26vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.penguin_pay .money-item{
+    width: 28.53vw;
+    height: 13.33vw;
+    background-color: #ffffff;
+    border-radius: 6.66vw;
+    border: solid 1px #ff0055;
+    font-size: 4.8vw;
+    color: #ff0055;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 1.86vw 1.5vw;
+    flex-direction: column;
+}
+
+
+.penguin_pay .money-item p:nth-of-type(1){
+    font-size: 3.73vw;
+    font-weight: bold;
+    margin: 0;
+}
+
+.penguin_pay .money-item p:nth-of-type(2){
+    font-size: 3.2vw;
+    margin: 0;
+}
+
+
+.penguin_pay .money-item:nth-of-type(1){
+    background-color: #ff0055;
+    color: #ffffff;
+}
+
+.penguin_pay .money-item.noSelected{
+    background-color: #ffffff;
+    color: #ff0055;
+}
+
+.penguin_pay .money-item.selected{
+    background-color: #ff0055;
+    color: #ffffff;
+}
+
+
+.penguin_pay .notes{
+    padding-left: 4.4vw;
+}
+
+.penguin_pay .notes p:nth-of-type(1){
+    color: #a9a9a9;
+    font-size: 3.73vw;
+    padding-bottom: 4.13vw;
+    margin: 0;
+}
+
+.penguin_pay .notes .notes-item{
+    color: #757576;
+    font-size: 3.46vw;
+    line-height: 6.4vw;
+    margin: 0;
+}
+
+.penguin_pay .pay-button{
+    position: absolute;
+    width: 76vw;
+    height: 14.66vw;
+    margin-left: 12vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff0055;
+    box-shadow: 0 2.66vw 5.33vw 0 rgba(255, 0, 85, 0.4);
+    border-radius: 14.66vw;
+    top: 126.66vw;
+}
+
+.penguin_pay .pay-button span{
+    color: #ffffff;
+    font-size: 4.26vw;
+    font-weight: 600;
+}
+
+.penguin_pay .processing {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.penguin_pay .processing .process-block{
+    position: absolute;
+    top:52.53vw;
+    width: 74.66vw;
+    height: 28.8vw;
+    background-color: #ffffff;
+    margin-left: 12.66vw;
+}
+
+.penguin_pay .processing .process-block p:nth-of-type(1){
+    font-size: 5.33vw;
+    font-weight: 600;
+    text-align: center;
+    margin: 5.33vw 0 0 0;
+}
+
+.penguin_pay .processing .process-block p:nth-of-type(2){
+    font-size: 3.73vw;
+    color: #a9a9a9;
+    text-align: center;
+    margin: 5.33vw 0 0 0;
+}
+
+
+
+
+/*
+        penguin-result module
+ */
+
+.penguin_result ion-content{
+    background-color: #f2f2f2;
+}
+
+.penguin_result ion-content .scroll{
+    height: 100%;
+}
+
+.penguin_result .recharge-header{
+    width: 100%;
+    position: relative;
+    padding-top: 5.33vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.penguin_result .recharge-header .recharge-complete{
+    width: 21.06vw;
+    height: 21.06vw;
+    background-color: #01cb99;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.penguin_result .recharge-header .recharge-complete-un{
+    width: 21.06vw;
+    height: 21.06vw;
+    background-color: #ee0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.penguin_result .recharge-header .recharge-complete i,
+.penguin_result .recharge-header .recharge-complete-un i{
+    font-size: 6.4vw;
+    color: #ffffff;
+}
+
+.penguin_result .recharge-header p{
+    font-size: 5.33vw;
+    font-weight: 600;
+    color: #3a3a3a;
+    padding-top: 6.66vw;
+    margin-bottom: 0;
+}
+
+.penguin_result .order-info{
+    width:91.46vw;
+    margin-left: 4.26vw;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 5.33vw 0 rgba(0, 0, 0, 0.08);
+    padding: 5.33vw 4.26vw 0.53vw 4.26vw;
+    margin-top: 7.2vw;
+}
+
+.penguin_result .order-info p{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3.73vw;
+    font-size: 3.46vw;
+    color: #757576;
+}
+
+.penguin_result .penguin-ad{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.penguin_result .penguin-ad img{
+    width: 100%;
+    height: auto
+}

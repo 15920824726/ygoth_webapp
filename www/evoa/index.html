@@ -1,0 +1,19 @@
+<ion-view class="evoa_index">
+    <ion-content>
+        <div class="evoa_logo">
+            <img src="../webapp/img/evoa-logo.png"/>
+        </div>
+        <div class="title">支付您的订单</div>
+        <div class="app-no">
+            <p>申请号</p>
+            <input type="text" ng-model="query.app_no" placeholder="如：123456"/>
+        </div>
+        <div class="passport-no">
+            <p>护照号码</p>
+            <input type="text" ng-model="query.passport_no" placeholder="如：GXXXXXX"/>
+        </div>
+        <div class="query-btn" ng-click="goQuery()">
+            <p>确定</p>
+        </div>
+    </ion-content>
+</ion-view>

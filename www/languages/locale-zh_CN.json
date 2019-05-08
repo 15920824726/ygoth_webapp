@@ -571,5 +571,20 @@
     "SELECT_PAY":"请选择充值金额",
     "MATTERS_ONE":"1.话费充值一般在2小时内到账",
     "MATTERS_TWO":"2.请仔细核对您的手机号，确保充值成功进行",
-    "PAY_EXPECT":"立即支付"
+    "PAY_EXPECT":"立即支付",
+    "TOPUP_NUMBER":"充值号码",
+    "SELECT_MONEY":"选择面额",
+    "INTRODUCTION":"充值说明",
+    "VALUEED_TIME":"有效期：1天 (1X24小时)",
+    "FLOW":"流 量：无限数据流量",
+    "RATE":"速 率：512kbps",
+    "PROCESSING_DIAN":"正在处理....",
+    "WAITING_CONSTANT":"请稍后，即将完成",
+    "TOPUP_SUCCESS":"充值成功",
+    "TOPUP_TIME":"充值时间",
+    "WECHAT_ORDER_NUMBER":"微信订单号",
+    "TOPUP_FAIL":"充值失败",
+    "PENGUIN_NUMBER":"多多卡支付",
+    "PENGUIN_CHARGE_TIME":"选择充值时长",
+    "PAY_YOUR_ORDER": "支付您的订单"
 }

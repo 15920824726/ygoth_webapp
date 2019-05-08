@@ -6,19 +6,19 @@
             <p class="title suceess" ng-if="showPay">充值成功！</p>
             <div class="order-list" ng-if="!showPay">
                 <p>
-                    <span>号码</span><span>0811234567</span>
+                    <span>号码</span><span>{{orderData.phone_no}}</span>
                 </p>
                 <p>
-                    <span>运营商</span><span>3</span>
+                    <span>运营商</span><span>{{orderData.operator_id}}</span>
                 </p>
                 <p>
-                    <span>充值金额</span><span>10000 Rupiah</span>
+                    <span>充值金额</span><span>{{orderData.deno}} Rupiah</span>
                 </p>
                 <p>
-                    <span>订单号</span><span>1234567890001</span>
+                    <span>订单号</span><span>{{orderData.refill_no}}</span>
                 </p>
                 <p>
-                    <span>汇率</span><span>1人民币=2，116。2214印度卢比</span>
+                    <span>汇率</span><span>1人民币={{orderData.exchange_rate/10000}}印尼卢比</span>
                 </p>
             </div>
             <div class="order-list" ng-if="showPay">
@@ -43,7 +43,7 @@
             <img src="img/img_success@2x.png">
         </div>
         <div class="footer" ng-if="!showPay">
-            <div class="cost">需支付： ¥ 5.22</div>
+            <div class="cost">需支付： ¥ {{orderData.total_fee/100}}</div>
             <div class="confirm" ng-click="confirm()">确认支付</div>
         </div>
 

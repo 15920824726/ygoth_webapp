@@ -200,7 +200,45 @@ angular.module('ygoworld.services', [])
     return API;
 }])
 
-    // 印尼话费充值
+// 企鹅卡创建订单服务，得到订单服务
+.factory('pguinCard',['$http','ServerConfiguration',function ($http,ServerConfiguration) {
+    var API = {
+        createPguinOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl+'/api/v1/pguin_refills',params);
+        },
+        getPguninOrder: function (id) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/api/v1/pguin_refills/' + id);
+        },
+        createWechatOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl+'/wxpay/unifiedorder' , params);
+        },
+        testPenguinNumber: function (msisdn) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/pguin/gwv1/check/' + msisdn);
+        }
+    }
+    return API;
+}])
+
+//IKM创建订单服务，得到订单服务
+.factory('ikmCard',['$http','ServerConfiguration',function ($http,ServerConfiguration) {
+    var API = {
+        createIkmOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl+'/api/v1/ikm_refills',params);
+        },
+        getIkmOrder: function (id) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/api/v1/ikm_refills/' + id);
+        },
+        getIkmOrderFromIkm: function (id) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/ikmgw/v1/ikmrefills/' + id);
+        },
+        createWechatOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl+'/wxpay/unifiedorder' , params);
+        }
+    }
+    return API;
+}])
+
+// 印尼话费充值
 .factory('IkmFactory', ['$http', 'ServerConfiguration', 'DevServerConfiguration', function ($http, ServerConfiguration, DevServerConfiguration) {
     var API = {
         // 创建订单
@@ -210,4 +248,3 @@ angular.module('ygoworld.services', [])
     };
     return API;
 }]);
-

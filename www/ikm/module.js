@@ -1,4 +1,8 @@
-(function () {
+/*
+    created by 2018-06-16
+ */
+
+(function() {
     'use strict';
 
     /*
@@ -6,23 +10,34 @@
      */
     var moduleName = 'ikm';
 
-    angular.module(moduleName,[])
+    angular.module(moduleName, [])
         .config(['$stateProvider',
-            function ($stateProvider) {
+            function($stateProvider) {
                 $stateProvider
-                    .state('ikm', {
-                        url: '/ikm',
-                        templateUrl: 'ikm/ikm.html',
-                        controller: 'IkmCtrl'
+                    .state('ikmPay', {
+                        url: '/ikmPay',
+                        cache:false,
+                        templateUrl: 'ikm/ikm_pay.html',
+                        controller: 'IkmPayCtrl'
                     })
-                    .state('ikmOrder', {
-                        url: '/ikmOrder',
+                    .state('ikmPayReal', {
+                        url: '/ikmPayReal',
+                        cache:false,
                         params: {
-                            data: null
+                            'data': null
                         },
-                        templateUrl: 'ikm/ikm-order.html',
-                        controller: 'IkmOrderCtrl'
+                        templateUrl: 'ikm/ikm_payReal.html',
+                        controller: 'IkmPayRealCtrl'
+                    })
+                    .state('ikmResult',{
+                        url: '/IkmResult',
+                        cache:false,
+                        params:{
+                            refill_no: null
+                        },
+                        templateUrl: 'ikm/ikm_result.html',
+                        controller: 'IkmResultCtrl'
                     });
             }
         ]);
-})();
+})()

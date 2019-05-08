@@ -1,0 +1,123 @@
+.evoa_index {
+     background-color: #F5F4F6;
+}
+
+.evoa_logo {
+    text-align: center;
+    margin-top: 5rem;   
+}
+.evoa_logo img {
+    width:8.75rem;
+    height:8.31rem;
+    background:rgba(0,0,0,0);
+    opacity:1; 
+}
+
+.evoa_index .title {
+    margin-top: 2rem;
+    margin-left: 8rem;
+    width:7.13rem;
+    height:1.63rem;
+    font-size:0.9rem;
+    font-family:PingFang SC;
+    font-weight:800;
+    line-height:1.63rem;
+    color:rgba(51,0,102,1);
+    opacity:1;
+    text-align: center;
+}
+
+.app-no {
+    margin-top: 4rem;
+    width:17.19rem;
+    height:3.44rem;
+    background:rgba(255,255,255,1);
+    opacity:1;
+    border-radius:0rem;
+    margin-left: 3rem;
+}
+
+.app-no p {
+    width:2.63rem;
+    height:1.25rem;
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    line-height:3.0rem;
+    color:rgba(115,109,122,1);
+    opacity:1;
+    display: inline;
+    margin-left: 1rem;
+}
+
+.app-no input {
+    width:9.81rem;
+    height:1.25rem;
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    line-height:1.25rem;
+    color:rgba(215,209,219,1);
+    opacity:1;
+    margin-left: 2rem;
+    display: inline;
+}
+
+.passport-no {
+    margin-top: 1rem;
+    margin-left: 3rem;
+    width:17.19rem;
+    height:3.44rem;
+    background:rgba(255,255,255,1);
+    opacity:1;
+    border-radius:0rem;
+}
+.passport-no p {
+    width:3.5rem;
+    height:1.25rem;
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    line-height:3.44rem;
+    color:rgba(115,109,122,1);
+    opacity:1;
+    display: inline;
+    margin-left: 1rem;
+}
+
+.passport-no input {
+    width:6.25rem;
+    height:1.25rem;
+    font-size:0.88rem;
+    font-family:PingFang SC;
+    font-weight:500;
+    line-height:1.25rem;
+    color:rgba(215,209,219,1);
+    opacity:1;
+    margin-left: 1rem;
+    display: inline;
+}
+
+.query-btn {
+    margin-top: 3rem;
+    margin-left: 3rem;
+    width:17.19rem;
+    height:2.81rem;
+    background:rgba(51,0,102,1);
+    opacity:1;
+    border-radius:0rem;
+    text-align: center;
+}
+
+.query-btn p {
+    width:2.0rem;
+    height:1.31rem;
+    font-size:0.94rem;
+    font-family:PingFang SC;
+    font-weight:bold;
+    line-height:1rem;
+    color:rgba(255,255,255,1);
+    opacity:1;
+    padding-top: 1rem;
+    margin-left: 7.6rem;
+}

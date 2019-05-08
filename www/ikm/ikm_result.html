@@ -1,0 +1,38 @@
+<ion-view class="ikm_result">
+    <ion-content>
+        <div class="recharge-header" data-ng-if="showuSuccess && showCtrl">
+            <div class="recharge-complete">
+                <i  class="icon-ygo-confim"></i>
+            </div>
+            <p>{{translations.TOPUP_SUCCESS}}</p>
+        </div>
+        <div class="recharge-header" data-ng-if="!showuSuccess && showCtrl">
+            <div class="recharge-complete-un">
+                <i  class="icon-ygo-warn"></i>
+            </div>
+            <p>{{translations.TOPUP_FAIL}}</p>
+        </div>
+        <div class="order-info" data-ng-if="showuSuccess && showCtrl">
+            <p>
+                <span>{{translations.TOPUP_NUMBER}}</span>
+                <span>{{orders.msisdn}}</span>
+            </p>
+            <p>
+                <span>{{translations.TOPUP_TIME}}</span>
+                <span>{{orderTime}}</span>
+            </p>
+            <p>
+                <span>{{translations.ORDER_NUMBER}}</span>
+                <span>{{orders.session_id}}</span>
+            </p>
+            <p>
+                <span>{{translations.WECHAT_ORDER_NUMBER}}</span>
+                <span>{{orders.transaction_id}}</span>
+            </p>
+        </div>
+        <div class="penguin-ad">
+            <img src="img/penguin_ad.png">
+        </div>
+
+    </ion-content>
+</ion-view>

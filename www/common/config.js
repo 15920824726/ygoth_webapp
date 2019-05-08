@@ -6,10 +6,10 @@ angular.module("ygoworld.configs", [])
 
     //国内环境
     .constant("ChinaServerConfiguration", {
-        "baseApiUrl": "https://ygoworld.com",
-        "socketUrl": "https://ygoworld.com",
-        "domain": "https://ygoworld.com",
-        "updateUrl": "https://ygoworld.com"
+        "baseApiUrl": "https://th.ygoworld.com",
+        "socketUrl": "https://th.ygoworld.com",
+        "domain": "https://th.ygoworld.com",
+        "updateUrl": "https://th.ygoworld.com"
     })
 
     //泰国环境
@@ -22,8 +22,8 @@ angular.module("ygoworld.configs", [])
 
     //开发环境
     .constant("DevServerConfiguration", {
-        "baseApiUrl": "https://test.ygoworld.com",
-        "socketUrl": "https://test.ygoworld.com",
-        "domain": "https://test.ygoworld.com",
-        "updateUrl": "https://test.ygoworld.com"
+        "baseApiUrl": "https://th.ygoworld.com",
+        "socketUrl": "https://th.ygoworld.com",
+        "domain": "https://th.ygoworld.com",
+        "updateUrl": "https://th.ygoworld.com"
     });

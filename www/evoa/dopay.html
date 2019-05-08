@@ -1,0 +1,29 @@
+<ion-view class="payment">
+        <ion-content>
+            <div class="white-bg">
+                <div class="total">
+                    <p>{{query.visa_fee + query.service_fee}}</p><span> 泰铢</span>
+                </div>
+                <div class="visa-fee">
+                    <p>签证费</p><span>{{query.visa_fee}}</span>
+                </div>
+                <div class="service-fee">
+                    <p>手续费</p><span>{{query.service_fee}}泰铢</span>
+                </div>
+                <hr class="divider-line" />
+                <div class="name">
+                    <p>姓名</p><span>{{query.name}}</span>
+                </div>
+                <div class="passport">
+                    <p class="passport">护照号</p><span>{{'XXXXX' + query.passport_no.substring(4)}}</span>
+                </div>
+                <div class="arrived-at">
+                    <p>到达日期</p><span>{{query.arrived_at}}</span>
+                </div>
+            </div>
+            <div class="payment-btn" ng-click="makePayment()">
+                <p>合计支付：{{query.visa_fee + query.service_fee}}泰铢</p>
+                <span>去支付</span><img src="../webapp/img/icon_wechat@2x.png" />
+            </div>
+        </ion-content>
+    </ion-view>

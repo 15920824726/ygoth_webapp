@@ -9,7 +9,7 @@
             <div class="number">
                 <input  placeholder="如： 0811234567" ng-class="{'hasvalue':user.mobile}"  ng-model="user.mobile" >
                 <p ng-if="!wrongNumber && !showPrice">充值面额根据运营商而不同， 请先输入号码。</p>
-                <p ng-if="!wrongNumber && showPrice">此号码归属于：{{goods.id}}</p>
+                <p ng-if="!wrongNumber && showPrice">此号码归属于：{{goods.name}}</p>
                 <p ng-if="wrongNumber && !showPrice" class="wrong">号码有误!</p>
                 <img ng-if="showPrice && goods.id=='THREE'"   src="img/operator_A@2x.png">
                 <img ng-if="showPrice && goods.id=='TELKOMSEL'"   src="img/operator_B@2x.png">

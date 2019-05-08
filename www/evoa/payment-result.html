@@ -1,0 +1,36 @@
+<ion-view class="payment-result">
+    <ion-content>
+        <div class="white-gb">
+            <div class="success-img">
+                <img src="../webapp/img/icon_finish@3x.png"/>
+            </div>
+            <div class="pay-finish">
+                <p>支付完成</p>
+            </div>
+            <div class="amount">
+                <p>金额</p>
+                <span>{{result.amount}}泰铢</span>
+            </div>
+            <hr/>
+            <div class="app-no">
+                <p>申请号</p>
+                <span>{{result.app_no}}</span>
+            </div>
+            <div class="payment-no">
+                <p>支付流水号</p>
+                <span>{{result.payment_no}}</span>
+            </div>
+            <div class="time-end">
+                <p>完成时间</p>
+                <span>{{result.end_at}}</span>
+            </div>
+        </div>
+        <div class="caution">
+            <img src="../webapp/img/icon_caution@3x.png"/>
+            <p>请注意查看邮件通知，获取最新状态</p>
+        </div>
+        <div class="ok-btn" ng-click="back()">
+            <p>完成</p>
+        </div>
+    </ion-content>
+</ion-view>

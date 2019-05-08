@@ -1,0 +1,36 @@
+<ion-view class="penguin_pay">
+    <ion-content>
+
+        <div class="tel-number">
+            <p>{{translations.PAY_EXPECT}}</p>
+            <input ng-class="{'minFont':user.telphone}" type="tel" ng-model="user.telphone" placeholder="请输入号码"/>
+        </div>
+
+        <div class="money">
+            <p>{{translations.SELECT_MONEY}}</p>
+            <div class="money-block">
+                <div ng-click="selectPackage(tt,$index)" ng-class="{'selected' : selected ==$index ,'noSelected':selected !=$index}"  class="money-item"  ng-repeat="tt in numbers" >
+                    ￥ {{tt}}
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <p>{{translations.INTRODUCTION}}</p>
+            <p class="notes-item">{{translations.VALUEED_TIME}}</p>
+            <p class="notes-item">{{translations.FLOW}}</p>
+            <p class="notes-item">{{translations.RATE}}</p>
+        </div>
+
+        <div class="pay-button" ng-click="pay()">
+            <span>{{translations.PAY_EXPECT}}</span>
+        </div>
+
+    </ion-content>
+    <div ng-show="showProcess"  class="processing">
+        <div class="process-block">
+            <p>{{translations.PROCESSING_DIAN}}</p>
+            <p>{{translations.WAITING_CONSTANT}}</p>
+        </div>
+    </div>
+</ion-view>

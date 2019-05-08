@@ -1,0 +1,45 @@
+<ion-view class="penguin_pay">
+    <ion-content>
+
+        <p class="pg-title">欢迎使用玩够泰国旗下SIM卡</p>
+        <div class="pg-logo">
+            <img src="img/penguin_logo.png">
+        </div>
+
+        <div class="tel-number">
+            <p>{{translations.PENGUIN_NUMBER}}</p>
+            <input ng-class="{'minFont':user.telphone}" type="tel" ng-model="user.telphone" placeholder="例如651123456"/>
+        </div>
+
+        <div class="money">
+            <p>{{translations.PENGUIN_CHARGE_TIME}}</p>
+            <div class="money-block">
+                <div ng-click="selectPackage(tt,$index)" ng-class="{'selected' : selected ==$index ,'noSelected':selected !=$index}"  class="money-item"  ng-repeat="tt in numbers" >
+                    <p>{{tt.date}}天</p>
+                    <p>￥{{tt.price}}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="notes">
+            <p>{{translations.INTRODUCTION}}</p>
+            <!--<p class="notes-item">{{translations.VALUEED_TIME}}</p>-->
+            <!--<p class="notes-item">{{translations.FLOW}}</p>-->
+            <!--<p class="notes-item">{{translations.RATE}}</p>-->
+            <p class="notes-item"><span>有效期: </span><span>{{package.time}}</span></p>
+            <p class="notes-item"><span>流&nbsp&nbsp&nbsp量: </span><span>{{package.traffic}}</span></p>
+            <p class="notes-item"><span>速&nbsp&nbsp&nbsp率: </span><span>{{package.rate}}</span></p>
+        </div>
+
+        <div class="pay-button" ng-click="pay()">
+            <span>{{translations.PAY_EXPECT}}</span>
+        </div>
+
+    </ion-content>
+    <div ng-if="showProcess"  class="processing">
+        <div class="process-block">
+            <p>{{translations.PROCESSING_DIAN}}</p>
+            <p>{{translations.WAITING_CONSTANT}}</p>
+        </div>
+    </div>
+</ion-view>

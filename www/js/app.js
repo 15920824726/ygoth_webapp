@@ -16,7 +16,9 @@
     'ygoworld.directives',
     'ygoworld.configs',
     'ygoworld.constants',
-    'ygoworld.filters'
+    'ygoworld.filters',
+    'penguin',
+    'evoa'
   ])
 
   .run(function($ionicPlatform, $http, APP, ServerConfiguration, DevServerConfiguration, ChinaServerConfiguration) {
@@ -33,10 +35,10 @@
       // }
 
 
-      /*
-       *  根据用户的位置访问不同的服务器（中国或泰国）；根据APP.devMode判断是否为开发环境，如果是则访问开发环境
-       *
-       */
+        /*
+         *  根据用户的位置访问不同的服务器（中国或泰国）；根据APP.devMode判断是否为开发环境，如果是则访问开发环境
+         *
+         */
       function getIp() {
         //获取IP  根据IP获取国家
         $http.get('http://pv.sohu.com/cityjson?ie=utf-8').success(function(data) {
@@ -136,11 +138,44 @@
         $urlRouterProvider.otherwise('/topup');
       } else if (address.indexOf('/posmenu') > 0) {
         $urlRouterProvider.otherwise('/posmenu');
-      }else if(address.indexOf('ikm')){
-        $urlRouterProvider.otherwise('/ikm');
+      }else if (address.indexOf('/penguinPay') > 0){
+          var APPID = 'wxb5693e63f692bc4c';
+          var REDIRECT_URI = encodeURIComponent(location.href);
+          var SCOPE = 'snsapi_base';
+          var wxUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + APPID + '&redirect_uri=' + REDIRECT_URI + '&response_type=code&scope=' + SCOPE + '&state=STATE&connect_redirect=1#wechat_redirect';
+          if (location.href.indexOf('code') === -1) {
+              console.log('没有code');
+              location.href = wxUrl;
+          }
+          //$urlRouterProvider.otherwise('/penguinPay');
+        } else if (address.indexOf('/payment')>0) {
+          if (address.indexOf('orderId') ) {
+            var parrent = /\d+$/;
+            var selectId = address.match(parrent);
+            console.log('selectId[0]' + selectId[0]);
+            $urlRouterProvider.otherwise('/payment', { orderId: selectId[0]});
+          }
+          
+        } else if (address.indexOf('/evoa') > 0) {
+          $urlRouterProvider.otherwise('/index');
+      }else if(address.indexOf('ikmPay') > 0){
+        $urlRouterProvider.otherwise('/ikmPay')
       }else {
         $urlRouterProvider.otherwise('/UserSelect');
       }
+
+      /*
+       ** 重新重定向URL
+       *  默认为https://th.ygoworld.com/webapp/#/penguinPay
+       *  重定向后为  https://th.ygoworld.com/webapp/#/penguinPayReal
+      */
+      function RedirectUrl(url) {
+          if(url.indexOf('penguinPay')>0){
+              return url.replace('penguinPay','penguinPayReal');
+          }
+        return url;
+      }
+
     }
   ])
 })()

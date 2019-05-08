@@ -2,7 +2,9 @@
     font-size: 16px;
     color: #ff9214;
     position: absolute;
-    right: 3vw;
+    right:3vw;
+    top: 1.8vh;
+    font-size: 1vw;
 }
 
 
@@ -10,6 +12,9 @@
     position: absolute;
     right: 3vw;
     top: 4.8vh;
+<<<<<<< HEAD
+    font-size: 1vw;
+=======
     font-size: 01.vw;
 } */
 
@@ -116,4 +121,5 @@
     line-height: 4.26vw;
     color: #3a3a3a;
     font-weight: 500;
+>>>>>>> ec65b4b3e867baebc8a61a25eeb781a889c0cd33
 }
