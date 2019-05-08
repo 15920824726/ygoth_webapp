@@ -18,14 +18,21 @@ angular.module('ikm')
             $scope.selected = 0;
             $scope.price = '';
 
+            /*
+                 1. 已充值的电话号码，存储在本地，首先本地读取电话号码
+                 2. 读取CODE 获取openID
+                 3. 设置微信公总号配置，获取微信支付授权
+             */
+            $scope.$on('$ionicView.beforeEnter', function (e) {
 
-            InitData();
+            });
 
-            // 授权获得code 然后重定向回到该页面 获得openid
-            function InitData(){
-                // 获得code 根据 url
-            };
-
+            /*
+                ----设置标题-----
+             */
+            $scope.$on('$ionicView.enter', function (e) {
+                document.getElementsByTagName('title')[0].innerHTML = '印尼话费充值';
+            });
 
 
             $scope.select = function(item , index) {
