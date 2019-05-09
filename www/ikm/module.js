@@ -33,7 +33,8 @@
                         url: '/IkmResult',
                         cache:false,
                         params:{
-                            refill_no: null
+                            refill_no: null,
+                            operator_id: null
                         },
                         templateUrl: 'ikm/ikm_result.html',
                         controller: 'IkmResultCtrl'

@@ -22,8 +22,8 @@ angular.module("ygoworld.configs", [])
 
     //开发环境
     .constant("DevServerConfiguration", {
-        "baseApiUrl": "https://th.ygoworld.com",
-        "socketUrl": "https://th.ygoworld.com",
-        "domain": "https://th.ygoworld.com",
-        "updateUrl": "https://th.ygoworld.com"
+        "baseApiUrl": "https://test.ygoworld.com",
+        "socketUrl": "https://test.ygoworld.com",
+        "domain": "https://test.ygoworld.com",
+        "updateUrl": "https://test.ygoworld.com"
     });

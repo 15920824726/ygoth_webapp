@@ -239,12 +239,24 @@ angular.module('ygoworld.services', [])
 }])
 
 // 印尼话费充值
-.factory('IkmFactory', ['$http', 'ServerConfiguration', 'DevServerConfiguration', function ($http, ServerConfiguration, DevServerConfiguration) {
+.factory('IkmFactory', ['$http', 'ServerConfiguration', function ($http, ServerConfiguration) {
     var API = {
         // 创建订单
-        createOrder: function (data) {
-            return $http.post(DevServerConfiguration.baseApiUrl + '/api/v1/ikm_refills', data)
+        createOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl + '/api/v1/ikm_refills', params)
+        },
+        // 查询订单
+        getIkmOrder: function (id) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/api/v1/ikm_refills/' + id);
+        },
+        getIkmOrderFromIkm: function (id) {
+            return $http.get(ServerConfiguration.baseApiUrl+'/ikmgw/v1/ikmrefills' + id);
+        },
+        // 创建微信支付订单
+        createWechatOrder: function (params) {
+            return $http.post(ServerConfiguration.baseApiUrl + '/wxpay/unifiedorder', params)
         }
+
     };
     return API;
 }]);

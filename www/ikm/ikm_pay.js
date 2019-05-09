@@ -1,6 +1,6 @@
 angular.module('ikm')
-    .controller('IkmPayCtrl', ['$scope', '$translate', '$state', 'Loader', 'IkmFactory', '$http', '$rootScope',
-        function ($scope, $translate, $state, Loader, IkmFactory, $http, $rootScope) {
+    .controller('IkmPayCtrl', ['$scope', '$translate', '$state', 'Loader', 'IkmFactory', '$http','ServerConfiguration',
+        function ($scope, $translate, $state, Loader, IkmFactory, $http,ServerConfiguration) {
 
             $scope.currencyDatas = [
                 { "id" : "TELKOMSEL", "name" : "TELKOMSEL",   "range":['0811','0812','0813','0821','0822','0851','0852','0853','0823'], "fee": 0.0, "can_topup" : [10000,20000,25000,50000,100000,150000,200000,300000,500000,1000000] },
@@ -25,9 +25,8 @@ angular.module('ikm')
                  1. 读取CODE 获取openID
              */
             $scope.$on('$ionicView.beforeEnter', function (e) {
-
                 // h获取CODE
-                var codeUrl = 'https://th.ygoworld.com/wxoa/userinfo/';
+                var codeUrl = ServerConfiguration.baseApiUrl +  '/wxoa/userinfo/';
                 var CODE = location.href.match(/code=(\w+)/)[1];
 
                 // 如果缓存中包含userOpenid,则不请求openid
@@ -124,46 +123,31 @@ angular.module('ikm')
 
             });
 
+            // 确认提交
             $scope.confirm = function () {
-                var data = {
-                    created_at: "2019-05-08T11:35:54.970+08:00",
-                    deno: 20000 ,
-                    exchange_rate: 21162214 ,
-                    id: 8 ,
-                    phone_no: "08111234567" ,
-                    price: 20000,
-                    refill_no: "12045531180509102912",
-                    status: 10 ,
-                    total_fee: 945,
-                    updated_at: "2019-05-08T11:35:54.970+08:00",
+                Loader.showLoading();
+                var params = {
+                    openid: $scope.openid,
+                    phone_no: $scope.user.mobile,
+                    price: $scope.price,
+                    deno: $scope.price,
                     operator_id: $scope.goods.id
                 };
-                $state.go('ikmPayReal', {
-                    data: data
+                IkmFactory.createOrder(params).success(function (res) {
+                    if(res.status == 200) {
+                        Loader.hideLoading();
+                        var data = res.data;
+                        data.operator_id = $scope.goods.id;
+                        $state.go('ikmPayReal',{
+                            data: res.data
+                        })
+                    }else {
+                        Loader.toggleLoadingWithMessage('提交订单失败，请稍后再试！');
+                    }
+                }).error(function(err) {
+                    console.log(err);
+                    Loader.toggleLoadingWithMessage('提交订单失败，请稍后再试！');
                 })
-                // Loader.showLoading();
-                // var params = {
-                //     openid: '123456789',
-                //     phone_no: $scope.user.mobile,
-                //     price: $scope.price,
-                //     deno: $scope.price,
-                //     operator_id: $scope.goods.id
-                // };
-                // IkmFactory.createOrder(params).success(function (res) {
-                //     if(res.status == 200) {
-                //         Loader.hideLoading();
-                //         var data = res.data;
-                //         data.operator_id = $scope.goods.id
-                //         $state.go('ikmPayReal',{
-                //             data: res.data
-                //         })
-                //     }else {
-                //         Loader.toggleLoadingWithMessage('提交订单失败，请稍后再试！');
-                //     }
-                // }).error(function(err) {
-                //     console.log(err);
-                //     Loader.toggleLoadingWithMessage('提交订单失败，请稍后再试！');
-                // })
             }
 
         }
