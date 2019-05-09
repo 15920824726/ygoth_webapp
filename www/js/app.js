@@ -159,7 +159,15 @@
         } else if (address.indexOf('/evoa') > 0) {
           $urlRouterProvider.otherwise('/index');
       }else if(address.indexOf('ikmPay') > 0){
-        $urlRouterProvider.otherwise('/ikmPay')
+          var APPID = 'wxb5693e63f692bc4c';
+          var REDIRECT_URI = encodeURIComponent(location.href);
+          var SCOPE = 'snsapi_base';
+          var wxUrl = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=' + APPID + '&redirect_uri=' + REDIRECT_URI + '&response_type=code&scope=' + SCOPE + '&state=STATE&connect_redirect=1#wechat_redirect';
+          if (location.href.indexOf('code') === -1) {
+              console.log('没有code');
+              location.href = wxUrl;
+          }
+          // $urlRouterProvider.otherwise('/ikmPay')
       }else {
         $urlRouterProvider.otherwise('/UserSelect');
       }

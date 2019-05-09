@@ -18,12 +18,32 @@ angular.module('ikm')
             $scope.selected = 0;
             $scope.price = '';
 
+            $scope.openid = '';
+            $scope.APPID = 'wxb5693e63f692bc4c';
+
             /*
-                 1. 已充值的电话号码，存储在本地，首先本地读取电话号码
-                 2. 读取CODE 获取openID
-                 3. 设置微信公总号配置，获取微信支付授权
+                 1. 读取CODE 获取openID
              */
             $scope.$on('$ionicView.beforeEnter', function (e) {
+
+                // h获取CODE
+                var codeUrl = 'https://th.ygoworld.com/wxoa/userinfo/';
+                var CODE = location.href.match(/code=(\w+)/)[1];
+
+                // 如果缓存中包含userOpenid,则不请求openid
+                if (sessionStorage.getItem('user_openid')) {
+                    $scope.openid = sessionStorage.getItem('user_openid');
+                } else {
+                    $http.get(codeUrl + CODE).success(function (data) {
+                        console.log('data:', JSON.stringify(data));
+                        sessionStorage.setItem('user_openid', data.data.openid);
+                        $scope.openid = data.data.openid;
+                    }).error(function (res) {
+                        console.log(res);
+                    });
+                }
+
+                console.log('ok');
 
             });
 
